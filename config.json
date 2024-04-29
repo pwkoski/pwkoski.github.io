@@ -1,0 +1,7 @@
+{
+  "packages": ["numpy", "pandas"],
+  "files": {
+    "recipes.json": "./recipes.json",
+    "ingredients.json": "./ingredients.json"
+  }
+}
