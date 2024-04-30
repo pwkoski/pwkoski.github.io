@@ -1,2 +1,28 @@
-{"name": "peas canned"
+{
+ "info": {
+   "name": "peas (canned)",
+   "growable": true,
+   "price_per_month": 0.00,
+   "fresh": false,
+   "composite": false,
+   "ingredient_grams_per_milliliter": 0.00
+  },
+ "growth": {
+   "grams_yield_per_plant": 0.00,
+   "plants_per_square_meter": 0.00
+  },
+  "storage": {
+    "grams_per_container": 0.00,
+    "storage_type": "dry",
+    "storage": "16oz jar",
+    "containers_per_square_meter": 0.00,
+    "containers_per_cubic_meter": 0.00
+  },
+  "nutrition": {
+      "protein_percentage": 0.00,
+      "carb_percentage": 0.00,
+      "fat_percentage": 0.00,
+      "calories_per_gram": 0.00
+  }
 }
+

@@ -1,4 +1,60 @@
-{"name": ["Judys Pea Casserole"],
-  "ingredient": ["peas canned"],
-  "amount": [".04"]
+{
+  "recipes": [
+  {
+  "name": "7-can soup",
+  "ingredients_and_amounts_in_milliliters": [
+      "corn (canned)", 450.0,
+      "kidney beans (canned)", 450.0,
+      "pinto beans (canned)", 450.0,
+      "black beans (canned)", 450.0,
+      "tomatoes (canned)", 740.0
+  ],
+  "recipe_calories": 2532.0,
+  "source": "https://www.foodnetwork.com/recipes/ree-drummond/7-can-soup-2813243"
+  },
+  {
+  "name": "Canned Salad",
+  "ingredients_and_amounts_in_milliliters": [
+      "black eyed peas (canned)", 450.0,
+      "artichoke (canned)", 450.0,
+      "chopped celery (frozen)", 450.0,
+      "tomatoes (canned)", 240.0
+  ],
+  "recipe_calories": 1710.0,
+  "source": "https://www.foodnetwork.com/recipes/canned-salad-5271198"
+  },
+  {
+  "name": "Quick and Easy Minestrone",
+  "ingredients_and_amounts_in_milliliters": [
+      "corn (canned)", 240,
+      "tomatoes (canned)", 450,
+      "white beans (canned)", 450,
+      "green beans (canned)", 450
+  ],
+  "recipe_calories": 1672.0,
+  "source": "https://www.foodnetwork.com/recipes/food-network-kitchen/quick-and-easy-minestrone-3362226"
+  },
+  {
+  "name": "Creamy Garlic Chicken with Penne and Peas",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 240,
+    "chopped zucchini (frozen)", 480,
+    "green peas (canned)", 450
+  ],
+  "recipe_calories": 2444.0,
+  "source": "https://lovecannedfood.com/recipes/creamy-garlic-chicken-with-penne-and-peas/"
+  },
+  {
+  "name": "Chili Con Carne with Roasted Butternut Squash",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped butternut squash (frozen)", 950,
+    "tomatoes (canned)", 450,
+    "kidney beans (canned)", 450,
+    "chopped onion (frozen)", 450,
+    "chopped green pepper (frozen)", 240
+  ],
+  "recipe_calories": 1748.0,
+  "source": "https://lovecannedfood.com/recipes/chili-con-carne-roasted-butternut-squash/"
+  }
+]
 }
