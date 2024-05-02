@@ -1,11 +1,7 @@
 import pandas as pd
 from pyscript import display
 import json
-import os
 
-
-#display(os.getcwd(), append=True)
-#display(os.listdir(), append=True)
 
 def generate_ingredient_list(recipe_list):
     ingredient_array = []
@@ -18,21 +14,13 @@ def generate_ingredient_list(recipe_list):
 
 
 
-with open('recipes.json') as json_file:
+with open('ingredients.json') as json_file:
     recipe_list = json.load(json_file)
 
-    # Print the type of data variable
-    #display(type(data), append=True)
+    # Print the data of dictionary, change to "recipes.json"
+    #display(generate_ingredient_list(recipe_list), append=True)
 
-    # Print the data of dictionary
-    display(generate_ingredient_list(recipe_list), append=True)
-
-
-#recipe_dict = js.load('recipes.json')
-#df = pd.read_json('recipes.json')
-
-#display(df, append=True)
-#display(recipe_dict, append=True)
-
+    # Print the ingredient list, change to "ingredients.json"
+    display(recipe_list, append=True)
 
 
