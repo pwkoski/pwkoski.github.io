@@ -39,7 +39,7 @@ with open('ingredients.json') as json_file:
 
 #Export to sessionStorage as a JSON
     jsonDf = df1.to_json()
-    js.sessionStorage.setItem("df", jsonDf)
+    #js.sessionStorage.setItem("df", jsonDf)
 
 
 
@@ -96,6 +96,9 @@ def calc_tot_mass_per_ingred(list_of_recipes, ingredient_dataframe, monthly_calo
 
 df2 = calc_tot_mass_per_ingred(recipe_list["recipes"], df1)
 display(df2)
-#display(print("the total mass of food for month is: ", df2['total_grams'].sum()))
-#df2.plot.barh(x="name", y="total_grams", figsize=(30, 5))
-#plt.show()
+display(print("the total mass of food for month is: ", df2['total_grams'].sum()))
+df2.plot.barh(x="name", y="total_grams", figsize=(30, 5))
+plt.show()
+
+jsonDf2 = df2.to_json()
+js.sessionStorage.setItem("df", jsonDf2)
