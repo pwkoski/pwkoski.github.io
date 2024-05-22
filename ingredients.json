@@ -13,10 +13,10 @@
    "plants_per_square_meter": 7.86
   },
   "storage": {
-    "grams_per_container": 0.00,
+    "grams_per_container": 255.00,
     "storage_type": "dry",
     "storage": "16oz jar",
-    "containers_per_square_meter": 0.00,
+    "containers_per_square_meter": 126.53,
     "containers_per_cubic_meter": 0.00
   },
   "nutrition": {
@@ -41,10 +41,10 @@
     "plants_per_square_meter": 13.12
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -69,10 +69,10 @@
     "plants_per_square_meter": 13.12
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -97,10 +97,10 @@
     "plants_per_square_meter": 13.12
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -125,10 +125,10 @@
     "plants_per_square_meter": 3.28
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -153,10 +153,10 @@
     "plants_per_square_meter": 78.74
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -181,10 +181,10 @@
     "plants_per_square_meter": 4.37
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -209,11 +209,11 @@
     "plants_per_square_meter": 6.56
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 340.00,
      "storage_type": "frozen",
      "storage": "1 gal bag",
      "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 0.00
+     "containers_per_cubic_meter": 264.172
    },
    "nutrition": {
        "protein_percentage": 0.0069,
@@ -237,10 +237,10 @@
     "plants_per_square_meter": 13.12
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -265,10 +265,10 @@
     "plants_per_square_meter": 39.38
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -293,11 +293,11 @@
     "plants_per_square_meter": 19.69
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 340.00,
      "storage_type": "frozen",
      "storage": "1 gal bag",
      "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 0.00
+     "containers_per_cubic_meter": 264.172
    },
    "nutrition": {
        "protein_percentage": 0.0118,
@@ -321,11 +321,11 @@
     "plants_per_square_meter": 9.84
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 340.00,
      "storage_type": "frozen",
      "storage": "1 gal bag",
      "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 0.00
+     "containers_per_cubic_meter": 264.172
    },
    "nutrition": {
        "protein_percentage": 0.0118,
@@ -349,10 +349,10 @@
     "plants_per_square_meter": 78.74
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 255.00,
      "storage_type": "dry",
      "storage": "16oz jar",
-     "containers_per_square_meter": 0.00,
+     "containers_per_square_meter": 126.53,
      "containers_per_cubic_meter": 0.00
    },
    "nutrition": {
@@ -377,11 +377,11 @@
     "plants_per_square_meter": 4.36
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 340.00,
      "storage_type": "frozen",
      "storage": "1 gal bag",
      "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 0.00
+     "containers_per_cubic_meter": 264.172
    },
    "nutrition": {
        "protein_percentage": 0.0105,
@@ -405,11 +405,11 @@
     "plants_per_square_meter": 3.28
    },
    "storage": {
-     "grams_per_container": 0.00,
+     "grams_per_container": 340.00,
      "storage_type": "frozen",
      "storage": "1 gal bag",
      "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 0.00
+     "containers_per_cubic_meter": 264.172
    },
    "nutrition": {
        "protein_percentage": 0.0120,

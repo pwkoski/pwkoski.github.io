@@ -52,6 +52,7 @@ with open('recipes.json') as json_file:
 #Create dict from json
     global recipe_list
     recipe_list = json.load(json_file)
+    js.sessionStorage.setItem("recipe_list", recipe_list)
     #display(print("recipe_list: ", recipe_list))
     #display(print("recipe list type: ", type(recipe_list["recipes"])))
 

@@ -1,10 +1,11 @@
 import pandas as pd
-from pyscript import display
+from pyscript import display, window, document
 import js
 import math
 #import squarify
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+
 
 
 
@@ -35,6 +36,13 @@ def calc_number_of_plants_per_ingred(ingredient_dataframe):
 
   ingredient_dataframe['no_of_plants'] = ingredient_dataframe['total_grams'] / ingredient_dataframe['grams_yield_per_plant']
 
+  ingredient_dataframe['yearly_no_of_plants'] = 12 * ingredient_dataframe['no_of_plants']
+
+  ingredient_dataframe['yearly_no_of_plants'] = ingredient_dataframe['yearly_no_of_plants'].apply(math.ceil)
+
+
+
+
   return ingredient_dataframe
 
 
@@ -42,24 +50,37 @@ def calc_grow_area_per_ingred(ingredient_dataframe):
 
     ingredient_dataframe['grow_area_sq_meters'] = ingredient_dataframe['no_of_plants'] / ingredient_dataframe['plants_per_square_meter']
 
+    ingredient_dataframe['yearly_grow_area'] = 12 * ingredient_dataframe['grow_area_sq_meters']
+
+    ingredient_dataframe['yearly_grow_area'] = ingredient_dataframe['yearly_grow_area'].apply(math.ceil)
+
     return ingredient_dataframe
 
 
 df1 = calc_number_of_plants_per_ingred(df1)
 df1 = calc_grow_area_per_ingred(df1)
 
+df_display = df1[['name', 'yearly_no_of_plants', 'yearly_grow_area']]
+df_display = df_display.rename(columns={'name': 'Ingredient Name', 'yearly_no_of_plants': 'Yearly Number of Plants', "yearly_grow_area": "Ingredient Yearly Grow Area (sq. m)"})
+
+#Display as HTML table
+df_html = df_display.to_html()
+htmlObject = document.querySelector("#my_table")
+htmlObject.innerHTML = df_html
+
+
 
 #area = df1['grow_area_sq_meters'].sum()
 
-values = df1[['name', 'grow_area_sq_meters']]
+values = df1[['name', 'yearly_grow_area']]
 
 # values must be sorted descending (and positive)
 #values.sort(reverse=True)
-sorted = values.sort_values(by=['grow_area_sq_meters'], ascending=False)
+sorted = values.sort_values(by=['yearly_grow_area'], ascending=False)
 
 #display(print("this is sorted: ", sorted))
 
-listvalues = sorted['grow_area_sq_meters'].to_list()
+listvalues = sorted['yearly_grow_area'].to_list()
 listnames = sorted['name'].to_list()
 
 #display(print("this is listvalues: ", listvalues))
@@ -78,11 +99,11 @@ listnames = sorted['name'].to_list()
 
 #plt.show()
 
-#Calculate total grow area
-area_in_sq_meters = df1['grow_area_sq_meters'].sum()
+#Calculate total grow area for year
+area_in_sq_meters = df1['yearly_grow_area'].sum()
 
 #Set the planting row length
-row_length_in_m = 6.8
+row_length_in_m = 20
 
 #Set the grow row width (3 ft)
 grow_row_width_in_m = 0.914
@@ -90,7 +111,7 @@ grow_row_width_in_m = 0.914
 #Set the path width (2 ft)
 path_width_in_m = 0.6096
 
-#Calculate length of row for entire grow area
+#Calculate length of row for entire grow area for a year
 total_grow_length_in_m = area_in_sq_meters / grow_row_width_in_m
 
 #Calculate how many rows of planting row length (round up)
@@ -106,13 +127,14 @@ fig, ax = plt.subplots()
 ax.set_xlim([0.0, total_plot_length])
 ax.set_ylim([0.0, row_length_in_m])
 
+#display(print('this is the number of rows: ', no_of_rows))
 #Add the walking path rectangles
 for i in range(1, no_of_rows + 1):
    x_coord = grow_row_width_in_m * (i) + path_width_in_m * (i - 1)
    y_coord = 0.0
    width = path_width_in_m
    height = row_length_in_m
-   path = patches.Rectangle((x_coord, y_coord), width, height, linewidth=1, edgecolor='darkgoldenrod', facecolor='darkgoldenrod', fill=True)
+   path = patches.Rectangle((x_coord, y_coord), width, height, linewidth=1, edgecolor='darkgoldenrod', facecolor='darkgoldenrod', fill=True, label="Walking Path")
    ax.add_patch(path)
 
 #Add in the grow rows:
@@ -128,7 +150,7 @@ y_coord = 0.0
 
 for i in range(0, len(listnames)):
 
-   #Get a total row length for each ingredient
+   #Get a total row length for each ingredient on a yearly basis
    ingredient_row_length_remaining = listvalues[i] / grow_row_width_in_m
 
 
@@ -156,6 +178,7 @@ for i in range(0, len(listnames)):
           ingredient_row_length_remaining = ingredient_row_length_remaining - row_remaining
           row_remaining = row_length_in_m
 
+#Gets rid of duplicate legend entries
 handles, labels = plt.gca().get_legend_handles_labels()
 by_label = dict(zip(labels, handles))
 plt.legend(by_label.values(), by_label.keys(), bbox_to_anchor = (1.25, 0.6), loc='center right')
@@ -163,5 +186,7 @@ plt.legend(by_label.values(), by_label.keys(), bbox_to_anchor = (1.25, 0.6), loc
 plt.tight_layout()
 
 fig.set_figwidth(15)
+
+plt.axis('equal')
 
 plt.show()
