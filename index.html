@@ -11,6 +11,11 @@
         <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
     </head>
     <body>
+        <picture>
+            <source media="(min-width:600px)" srcset="/images/desktop.svg">
+            <source media="(min-width:300px)" srcset="/images/mobile.svg">
+            <img src="/images/desktop.svg" alt="Homestead" style="width:auto;">
+        </picture>
         <nav class="topnav">
             <a class="active" href="index.html">Summary</a>
             <a href="growth.html">Growth</a>
@@ -19,6 +24,7 @@
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
         </nav>
+
         <div>Be Patient, Python loading!</div>
         <script type="py" src="main.py" config="./config.json"></script>
     </body>

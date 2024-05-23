@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2500"
+   height="1500"
+   viewBox="0 0 661.45832 396.875"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="template.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1"
+     inkscape:cx="1181"
+     inkscape:cy="95.5"
+     inkscape:window-width="1440"
+     inkscape:window-height="769"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer5" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Phone Outline">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+       id="rect1"
+       width="105.83334"
+       height="211.66667"
+       x="12.892544"
+       y="14.93678" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Desktop Outline">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.531497;stroke-opacity:1"
+       id="rect1-5-0-0"
+       width="380.46851"
+       height="237.59351"
+       x="130.20569"
+       y="16.353897" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.478183;stroke-opacity:1"
+       id="rect1-5-0"
+       width="360.94263"
+       height="202.72182"
+       x="130.50121"
+       y="17.210999" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.672281;stroke-opacity:1"
+       id="rect1-5"
+       width="507.3277"
+       height="285.07773"
+       x="129.34665"
+       y="16.531265" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Canvas Mobile">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.227736;stroke-opacity:1"
+       id="rect2"
+       width="105.60558"
+       height="39.459763"
+       x="12.874126"
+       y="15.265723" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Canvas Desktop">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.285672;stroke-opacity:1"
+       id="rect3-9"
+       width="506.22009"
+       height="71.151833"
+       x="129.94008"
+       y="16.490973" />
+  </g>
+</svg>
