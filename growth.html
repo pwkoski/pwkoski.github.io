@@ -11,6 +11,7 @@
         <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
     </head>
     <body>
+        <img width="100%" viewBox="0 0 1914 270" src="/images/desktop1postunion.svg"><img>
         <nav class="topnav">
             <a href="index.html">Summary</a>
             <a class="active" href="growth.html">Growth</a>
@@ -19,8 +20,21 @@
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
         </nav>
-        <div>Be Patient, Python loading!</div>
-        <div id="my_table"></div>
-        <script type="py" src="growth.py" config="./config.json"></script>
+        <div id="container">
+            <div id="text">
+                <p>ThirtyMeals is a program that takes in a list of ingredients and a list of recipes and calculates the:</p>
+                    <ul>
+                        <li>Growth Area</li>
+                        <li>Storage</li>
+                        <li>Nutrition</li>
+                    </ul>
+                <p>
+                    It uses Python for almost all calculations. The initial calculations are complete when you see a table of the ingredient amounts below this text. After you see the table, feel free to click on any of the other pages</p>
+
+            </div>
+            <div id="my_table"></div>
+            <div id="pythontable"></div>
+            <script type="py" src="growth.py" config="./config.json"></script>
+        </div>
     </body>
 </html>

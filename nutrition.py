@@ -71,4 +71,7 @@ ax2.yaxis.tick_right()
 
 
 plt.legend()
-plt.show()
+#plt.show()
+
+display(fig, target="pythontable")
+

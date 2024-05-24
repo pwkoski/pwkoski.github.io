@@ -189,4 +189,6 @@ fig.set_figwidth(15)
 
 plt.axis('equal')
 
-plt.show()
+#plt.show()
+
+display(fig, target="pythontable")

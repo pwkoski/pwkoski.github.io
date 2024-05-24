@@ -1,5 +1,5 @@
 import pandas as pd
-from pyscript import display
+from pyscript import display, window, document
 import json
 import js
 import matplotlib.pyplot as plt
@@ -96,10 +96,22 @@ def calc_tot_mass_per_ingred(list_of_recipes, ingredient_dataframe, monthly_calo
 
 
 df2 = calc_tot_mass_per_ingred(recipe_list["recipes"], df1)
-display(df2)
-display(print("the total mass of food for month is: ", df2['total_grams'].sum()))
-df2.plot.barh(x="name", y="total_grams", figsize=(30, 5))
-plt.show()
+#display(df2)
+#display(print("the total mass of food for month is: ", df2['total_grams'].sum()))
+#df2.plot.barh(x="name", y="total_grams", figsize=(30, 5))
+#plt.show()
 
+
+#Display html table
+df_display = df2[['name', 'total_grams']]
+df_display = df_display.rename(columns={'name': 'Ingredient Name', 'total_grams': 'Total Monthly Grams Consumed'})
+
+#Display as HTML table
+df_html = df_display.to_html(index_names=False,index=False)
+htmlObject = document.querySelector("#pythontable")
+htmlObject.innerHTML = df_html
+
+
+#Sending the file out
 jsonDf2 = df2.to_json()
 js.sessionStorage.setItem("df", jsonDf2)
