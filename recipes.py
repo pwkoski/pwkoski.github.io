@@ -84,7 +84,7 @@ def generate_recipe_table(recipe_list):
 table_html = generate_recipe_table(recipe_dict['recipes'])
 
 #Display as HTML table
-display(print("this is table_html: ", table_html))
+#display(print("this is table_html: ", table_html))
 htmlObject = document.querySelector("#recipes")
 htmlObject.innerHTML = table_html
 

@@ -11,14 +11,9 @@
         <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
     </head>
     <body>
-        <img width="100%" viewBox="0 0 1914 270" src="/images/desktop1postunion.svg"><img>
-        <!--
-        <picture id="topimage">
-            <source media="(min-width:600px)" srcset="/images/desktop1postunion.svg">
-            <source media="(min-width:300px)" srcset="/images/mobile1.svg">
-            <img src="/images/desktop.svg" alt="ThirtyMealsLogo" style="width:auto;">
-        </picture>
-        -->
+
+        <img width="100%" viewBox="0 0 1914 270" src="/images/final.svg"><img>
+
         <nav class="topnav">
             <a class="active" href="index.html">Summary</a>
             <a href="growth.html">Growth</a>
@@ -27,21 +22,23 @@
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
         </nav>
-        <div id="container">
-            <div id="text">
-                <p>ThirtyMeals is a program that takes in a list of ingredients and a list of recipes and calculates the:</p>
+        <div class="container">
+            <div class="text">
+                <p>ThirtyMeals is a program that calculates how much growing area and storage a person would need to grow their own food for a year.  The program takes in a list of <a href="recipes.json">meals</a>, a list of <a href="ingredients.json">ingredients</a>, and a monthly individual caloric goal (60,000 cals).  Assuming you eat nothing but the meals in the list, ThirtyMeals will calculate information related to:</p>
                     <ul>
                         <li>Growth Area</li>
                         <li>Storage</li>
                         <li>Nutrition</li>
                     </ul>
                 <p>
-                    It uses Python for almost all calculations. The initial calculations are complete when you see a table of the ingredient amounts below this text. After you see the table, feel free to click on any of the other pages</p>
+                    It uses Python for almost all calculations. The initial calculations are complete when you see a table of the ingredient amounts below this paragraph. After you see the table, feel free to click on any of the other pages</p>
 
             </div>
+
             <div id="pythontable">
                 <script type="py" src="main.py" config="./config.json"></script>
             </div>
+
         </div>
     </body>
 </html>

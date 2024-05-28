@@ -11,7 +11,8 @@
         <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
     </head>
     <body>
-        <img width="100%" viewBox="0 0 1914 270" src="/images/desktop1postunion.svg"><img>
+        <img width="100%" viewBox="0 0 1914 270" src="/images/final.svg"><img>
+
         <nav class="topnav">
             <a href="index.html">Summary</a>
             <a class="active" href="growth.html">Growth</a>
@@ -20,21 +21,24 @@
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
         </nav>
-        <div id="container">
-            <div id="text">
-                <p>ThirtyMeals is a program that takes in a list of ingredients and a list of recipes and calculates the:</p>
-                    <ul>
-                        <li>Growth Area</li>
-                        <li>Storage</li>
-                        <li>Nutrition</li>
-                    </ul>
-                <p>
-                    It uses Python for almost all calculations. The initial calculations are complete when you see a table of the ingredient amounts below this text. After you see the table, feel free to click on any of the other pages</p>
 
+        <div class="container">
+            <div class="text">
+                <p>The Growth Section takes the monthly amount of each ingredient and calculates how many plants are needed to provide that amount of ingredient for the year. This information is in the first table and can be used to figure out how many seeds of each plant are needed.</p>
+
+                <p>Plants vary on how closely they can be planted together.  Taking this into account, the total grow area for each ingredient is calculated.</p>
+
+                <p>In a real garden, there need to be walking paths for harvesting, weeding, etc.  The growing areas for each ingredient are formed into 3' rows and a 2' wide walking path is placed in between each row. The garden layout can be seen in the second figure. </p>
             </div>
+
             <div id="my_table"></div>
+
+            <br><br>
+
             <div id="pythontable"></div>
+
             <script type="py" src="growth.py" config="./config.json"></script>
+
         </div>
     </body>
 </html>

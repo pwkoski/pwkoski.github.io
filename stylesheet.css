@@ -2,12 +2,13 @@
 .topnav {
   background-color: #ffa62f;
   overflow: hidden;
+  border: 1px solid black;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #ffe8c8;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -50,7 +51,7 @@
 background-color: #ffe8c8;
 */
 
-#container {
+.container {
   height: auto;
   background-image: linear-gradient(180deg, white, #ffe8c8);
   }

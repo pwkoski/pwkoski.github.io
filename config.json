@@ -2,6 +2,7 @@
   "packages": ["pandas", "matplotlib", "squarify"],
   "files": {
     "recipes.json": "./recipes.json",
-    "ingredients.json": "./ingredients.json"
+    "ingredients.json": "./ingredients.json",
+    "functions.py": "./functions.py"
   }
 }
