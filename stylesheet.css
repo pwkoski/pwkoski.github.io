@@ -1,4 +1,4 @@
-/* Add a black background color to the top navigation */
+/* Style top Navigation Bar */
 .topnav {
   background-color: #ffa62f;
   overflow: hidden;
@@ -31,14 +31,14 @@
 }
 
 
-/*This is messing with the SVG at top of page */
+/*Style the SVG at top of page */
 
 #topimage {
   width: "100%";
   }
 
 
-/*This is getting the content to overflow */
+/*Makes table overflow */
 
 #pythontable {
   width: 100%;
@@ -48,7 +48,6 @@
   }
 
 /*This is getting the background on everything below the nav bar
-background-color: #ffe8c8;
 */
 
 .container {
@@ -66,7 +65,6 @@ tr:nth-child(even) {
 
 table {
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 table th {
@@ -91,7 +89,6 @@ p, ul {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
   border-collapse: collapse;
-
 }
 
 #recipes th, td {

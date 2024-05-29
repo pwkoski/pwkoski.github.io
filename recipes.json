@@ -26,10 +26,10 @@
   {
   "name": "Quick and Easy Minestrone",
   "ingredients_and_amounts_in_milliliters": [
-      "corn (canned)", 240,
-      "tomatoes (canned)", 450,
-      "white beans (canned)", 450,
-      "green beans (canned)", 450
+      "corn (canned)", 240.0,
+      "tomatoes (canned)", 450.0,
+      "white beans (canned)", 450.0,
+      "green beans (canned)", 450.0
   ],
   "recipe_calories": 1672.0,
   "source": "https://www.foodnetwork.com/recipes/food-network-kitchen/quick-and-easy-minestrone-3362226"
@@ -37,9 +37,9 @@
   {
   "name": "Creamy Garlic Chicken with Penne and Peas",
   "ingredients_and_amounts_in_milliliters": [
-    "chopped onion (frozen)", 240,
-    "chopped zucchini (frozen)", 480,
-    "green peas (canned)", 450
+    "chopped onion (frozen)", 240.0,
+    "chopped zucchini (frozen)", 480.0,
+    "green peas (canned)", 450.0
   ],
   "recipe_calories": 2444.0,
   "source": "https://lovecannedfood.com/recipes/creamy-garlic-chicken-with-penne-and-peas/"
@@ -47,11 +47,11 @@
   {
   "name": "Chili Con Carne with Roasted Butternut Squash",
   "ingredients_and_amounts_in_milliliters": [
-    "chopped butternut squash (frozen)", 950,
-    "tomatoes (canned)", 450,
-    "kidney beans (canned)", 450,
-    "chopped onion (frozen)", 450,
-    "chopped green pepper (frozen)", 240
+    "chopped butternut squash (frozen)", 950.0,
+    "tomatoes (canned)", 450.0,
+    "kidney beans (canned)", 450.0,
+    "chopped onion (frozen)", 450.0,
+    "chopped green pepper (frozen)", 240.0
   ],
   "recipe_calories": 1748.0,
   "source": "https://lovecannedfood.com/recipes/chili-con-carne-roasted-butternut-squash/"
