@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <title>Ingredients</title>
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -11,9 +12,7 @@
         <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
     </head>
     <body>
-
         <img width="100%" viewBox="0 0 1914 270" src="/images/final.svg"><img>
-
         <nav class="topnav">
             <a href="index.html">Summary</a>
             <a href="growth.html">Growth</a>
@@ -22,17 +21,14 @@
             <a href="recipes.html">Recipes</a>
             <a class="active" href="ingredients.html">Ingredients</a>
         </nav>
-
         <div class="container">
-
             <div class="text">
-                <p>The Ingredient Section displays all the ingredients used for ThirtyMeals.  This is the data that is used by all the different pages to calculate and display data.</p>
+                <p>
+                    The Ingredient Section displays all the ingredients used for ThirtyMeals.  This is the data that is used by all the different pages to calculate and display data.
+                </p>
             </div>
-
             <div id="pythontable"></div>
-
             <script type="py" src="ingredients.py" config="./config.json"></script>
-
         </div>
     </body>
 </html>

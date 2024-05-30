@@ -13,7 +13,6 @@ df = pd.read_json(data)
 #Perform calculations
 df = functions.calc_number_of_containers_per_ingred(df)
 
-
 #Create summary table
 #Group entries by storage type and sum columns
 grouped_df = df.groupby('storage').sum(numeric_only=True)
@@ -26,7 +25,6 @@ df_display1 = df_display1.rename(columns={'yearly_no_of_containers': 'Yearly Num
 df_html1 = df_display1.to_html()
 htmlObject1 = document.querySelector("#my_table1")
 htmlObject1.innerHTML = df_html1
-
 
 #Create individual table
 df_display2 = df[['name', 'yearly_no_of_containers', 'storage_type', 'storage', 'yearly_container_area', 'yearly_container_volume' ]]

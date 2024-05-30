@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <title>Growth</title>
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -12,7 +13,6 @@
     </head>
     <body>
         <img width="100%" viewBox="0 0 1914 270" src="/images/final.svg"><img>
-
         <nav class="topnav">
             <a href="index.html">Summary</a>
             <a class="active" href="growth.html">Growth</a>
@@ -21,24 +21,22 @@
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
         </nav>
-
         <div class="container">
             <div class="text">
-                <p>The Growth Section takes the monthly amount of each ingredient and calculates how many plants are needed to provide that amount of ingredient for the year. This information is in the first table and can be used to figure out how many seeds of each plant are needed.</p>
-
-                <p>Plants vary on how closely they can be planted together.  Taking this into account, the total grow area for each ingredient is calculated.</p>
-
-                <p>In a real garden, there need to be walking paths for harvesting, weeding, etc.  The growing areas for each ingredient are formed into 3' rows and a 2' wide walking path is placed in between each row. The garden layout can be seen in the second figure. </p>
+                <p>
+                    The Growth Section takes the monthly amount of each ingredient and calculates how many plants are needed to provide that amount of ingredient for the year. This information is in the first table and can be used to figure out how many seeds of each plant are needed.
+                </p>
+                <p>
+                    Plants vary on how closely they can be planted together.  Taking this into account, the total grow area for each ingredient is calculated.
+                </p>
+                <p>
+                    In a real garden, there need to be walking paths for harvesting, weeding, etc.  The growing areas for each ingredient are formed into 3' rows and a 2' wide walking path is placed in between each row. The garden layout can be seen in the second figure.
+                </p>
             </div>
-
             <div id="my_table"></div>
-
             <br><br>
-
             <div id="pythontable"></div>
-
             <script type="py" src="growth.py" config="./config.json"></script>
-
         </div>
     </body>
 </html>

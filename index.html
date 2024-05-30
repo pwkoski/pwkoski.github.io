@@ -1,19 +1,24 @@
 <!doctype html>
 <html>
     <head>
+        <title>ThirtyMeals</title>
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="google" content="nositelinkssearchbox">
         <link rel="stylesheet" href="stylesheet.css">
+        <!-- Facebook, LinkedIn, Twitter -->
+        <meta property="og:url" content="https://pwkoski.github.io/index.html" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ThirtyMeals" />
+        <meta property="og:image" content="https://isorepublic.com/wp-content/uploads/2021/05/iso-republic-italian-vineyard-low-free-stock-photo-1536x1151.jpg" />
         <!-- PyScript CSS -->
         <link rel="stylesheet" href="https://pyscript.net/releases/2024.4.1/core.css">
         <!-- This script tag bootstraps PyScript -->
         <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
     </head>
     <body>
-
         <img width="100%" viewBox="0 0 1914 270" src="/images/final.svg"><img>
-
         <nav class="topnav">
             <a class="active" href="index.html">Summary</a>
             <a href="growth.html">Growth</a>
@@ -24,24 +29,24 @@
         </nav>
         <div class="container">
             <div class="text">
-                <p>ThirtyMeals is a program that calculates how much growing area and storage a person would need to grow their own food for a year.  The program takes in a list of <a href="recipes.json">meals</a>, a list of <a href="ingredients.json">ingredients</a>, and a monthly individual caloric goal (60,000 cals).  Assuming you eat nothing but the meals in the list, ThirtyMeals will calculate information related to:</p>
-                    <ul>
-                        <li>Growth Area</li>
-                        <li>Storage</li>
-                        <li>Nutrition</li>
-                    </ul>
                 <p>
-                    It uses the Python programming language for almost all calculations. Python is slow, so each page will take some time to load.  Each page will have something (chart, graph) to look at other than just the text, so if you don't see anything...just wait!
+                    ThirtyMeals is a program that calculates how much growing area and storage a person would need to grow their own food for a year.  The program takes in a list of <a href="recipes.json">meals</a>, a list of <a href="ingredients.json">ingredients</a>, and a monthly individual caloric goal (60,000 cals).  Assuming you eat nothing but the meals in the list, ThirtyMeals will calculate information related to:
+                </p>
+                <ul>
+                    <li>Growth Area</li>
+                    <li>Storage</li>
+                    <li>Nutrition</li>
+                </ul>
+                <p>
+                    It uses the Python programming language for almost all calculations. Python is slow, so each page will take some time to load.  Each page will have something (chart, graph) to look at other than just text, so if you don't see anything...just wait!
                 </p>
                 <p>
-                    The initial calculations are complete when you see a table of the ingredient amounts below this paragraph. After you see the table, feel free to click on any of the other pages</p>
-
+                    The initial calculations are complete when you see a table of the ingredient amounts below this paragraph. After you see the table, feel free to click on any of the other pages.
+                </p>
             </div>
-
             <div id="pythontable">
                 <script type="py" src="main.py" config="./config.json"></script>
             </div>
-
         </div>
     </body>
 </html>

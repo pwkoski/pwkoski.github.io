@@ -16,4 +16,3 @@ table_html = functions.generate_recipe_table(recipe_dict['recipes'])
 #Display as HTML table
 htmlObject = document.querySelector("#recipes")
 htmlObject.innerHTML = table_html
-

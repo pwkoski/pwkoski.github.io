@@ -1,21 +1,14 @@
-#Summary Imports
 import pandas as pd
-
-#Growth Imports
 import math
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-#Storage Imports
-#import math
-
-
-
-
 #SUMMARY PAGE FUNCTIONS#
 #----------------------#
 
-
+#Creates an ingredient dataframe from an array of dictionarys containing the ingredient entries.  Each key will become a column title and the value will be entered at (row, column) -> (ingredient, key) unless the value is another dictionary.
+#@param array_of_dicts: a Python list of dictonaries
+#@return: Pandas dataframe with keys as column titles.
 def df_recursive_create(array_of_dicts):
 
     df = pd.DataFrame()
@@ -33,12 +26,12 @@ def df_recursive_create(array_of_dicts):
 
     return df
 
-
-
-
-
-
-def calc_tot_mass_per_ingred(list_of_recipes, ingredient_dataframe, monthly_caloric_limit=60000):
+#Calculates the mass of each ingredient for the month for a particular caloric limit and adds that column to a dataframe.
+#@param list_of_recipes: a Python list of recipe dictionaries
+#@param ingredient_dataframe: a Pandas dataframe created from ingredients.json
+#@param monthly_caloric_limit: a float representing a caloric limit for a 30-day month
+#@return: a Pandas dataframe with the monthly grams of each ingredient added
+def calc_tot_mass_per_ingred(list_of_recipes, ingredient_dataframe, monthly_caloric_limit=60000.0):
 
   #Create an empty column, initialize variables
   ingredient_dataframe['total_grams'] = pd.Series([0] * len(ingredient_dataframe))
@@ -77,14 +70,12 @@ def calc_tot_mass_per_ingred(list_of_recipes, ingredient_dataframe, monthly_calo
 
   return ingredient_dataframe
 
-
-
-
-
 #GROWTH PAGE FUNCTIONS#
 #----------------------#
 
-
+#Calculates the monthly and yearly number of plants needed and adds those columns to a dataframe.
+#@param ingredient_dataframe: a Pandas dataframe created from ingredients.json
+#@return: a Pandas dataframe with the monthly and yearly number of plants added
 def calc_number_of_plants_per_ingred(ingredient_dataframe):
 
   ingredient_dataframe['no_of_plants'] = ingredient_dataframe['total_grams'] / ingredient_dataframe['grams_yield_per_plant']
@@ -96,9 +87,9 @@ def calc_number_of_plants_per_ingred(ingredient_dataframe):
 
   return ingredient_dataframe
 
-
-
-
+#Calculates the monthly and yearly grow area needed and adds those columns to a dataframe.
+#@param ingredient_dataframe: a Pandas dataframe created from ingredients.json
+#@return: a Pandas dataframe with the monthly and yearly grow area added
 def calc_grow_area_per_ingred(ingredient_dataframe):
 
     ingredient_dataframe['grow_area_sq_meters'] = ingredient_dataframe['no_of_plants'] / ingredient_dataframe['plants_per_square_meter']
@@ -109,7 +100,7 @@ def calc_grow_area_per_ingred(ingredient_dataframe):
 
     return ingredient_dataframe
 
-
+#Color array used for drawing the garden plot
 color_array = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
 		  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
 		  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
@@ -121,7 +112,17 @@ color_array = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
 		  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3',
 		  '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF']
 
-
+#Draws the layout for the garden required to grow the ingredient amounts.
+#@param fig: a matplotlib figure returned from plt.subplots()
+#@param ax: a matplotlib axes returend from plt.subplots()
+#@param ingredient_names: a list of strings of each ingredient whose order corresponds with area_values.
+#@param area_values: a list of floats indicating area required for each ingredient, sorted descending.
+#@param: row_length_in_m: length of the garden planting rows in meters.
+#@param: grow_row_width_in_m: width of the garden planting rows in meters.
+#@param: path_width_in_m: width of the walking path between rows in meters.
+#@param: color_array: a list of strings whose values correspond to color codes.  If the list of ingredients is longer than the list of colors, the colors will cycle back to the beginning of list.
+#@param: fig_width: optional value to set the figure width.
+#@return fig, ax: updated figure and axes that shows the garden layout.
 def generate_garden_layout(fig, ax, ingredient_names, area_values, row_length_in_m, grow_row_width_in_m, path_width_in_m, color_array, fig_width=15):
 
   #Calculate total grow area for year
@@ -206,13 +207,12 @@ def generate_garden_layout(fig, ax, ingredient_names, area_values, row_length_in
 
   return fig, ax
 
-
-
-
 #STORAGE PAGE FUNCTIONS#
 #----------------------#
 
-
+#Calculates the monthly and yearly number of containers and container area/volume needed and adds those columns to a dataframe.
+#@param ingredient_dataframe: a Pandas dataframe created from ingredients.json
+#@return: a Pandas dataframe with the monthly and yearly number of containers and container area/volume added
 def calc_number_of_containers_per_ingred(ingredient_dataframe):
 
  #Calculate number of containers for each ingredient
@@ -236,13 +236,12 @@ def calc_number_of_containers_per_ingred(ingredient_dataframe):
 
  return ingredient_dataframe
 
-
-
-
-
 #NUTRITION PAGE FUNCTIONS#
 #----------------------#
 
+#Calculates the monthly calories, carbohydrates, proteins, and fats obtained from eating ingredients and adds those columns to a dataframe.
+#@param ingredient_dataframe: a Pandas dataframe created from ingredients.json
+#@return: a Pandas dataframe with the monthly and yearly calories, carbohydrates, proteins, and fats added
 def calc_nutrition_per_ingred(ingredient_dataframe):
 
  ingredient_dataframe['total_carbs'] = ingredient_dataframe['total_grams'] * ingredient_dataframe['carb_percentage']
@@ -255,13 +254,12 @@ def calc_nutrition_per_ingred(ingredient_dataframe):
 
  return ingredient_dataframe
 
-
-
-
-
 #RECIPE PAGE FUNCTIONS#
 #----------------------#
 
+#Builds an html table from a list of recipes.
+#@param recipe_list: a list of recipe dictionaries created from recipes.json
+#@return: an string that represents the table in html.
 def generate_recipe_table(recipe_list):
 
    htmlString = ""

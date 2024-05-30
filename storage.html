@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <title>Storage</title>
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -22,17 +23,16 @@
         </nav>
         <div class="container">
             <div class="text">
-                <p>The Storage Section takes the monthly amount of each ingredient and calculates how much dry and frozen storage are needed for the year. The totals are in the first table and the ingredient breakdown is in the second.</p>
+                <p>
+                    The Storage Section takes the monthly amount of each ingredient and calculates how much dry and frozen storage are needed for the year. The totals are in the first table and the ingredient breakdown is in the second.
+                </p>
             </div>
-
-            <div id="my_table1"></div>
-
-            <br><br>
-
-            <div id="my_table2"></div>
-
+            <div id="pythontable">
+                <div id="my_table1"></div>
+                <br><br>
+                <div id="my_table2"></div>
+            </div>
             <script type="py" src="storage.py" config="./config.json"></script>
-
         </div>
     </body>
 </html>

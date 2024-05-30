@@ -1,3 +1,9 @@
+/*Style the SVG at top of page */
+
+#topimage {
+  width: "100%";
+}
+
 /* Style top Navigation Bar */
 .topnav {
   background-color: #ffa62f;
@@ -30,34 +36,13 @@
   color: #ffe8c8;
 }
 
-
-/*Style the SVG at top of page */
-
-#topimage {
-  width: "100%";
-  }
-
-
-/*Makes table overflow */
-
+/*Set different table values */
 #pythontable {
   width: 100%;
   height: 400px;
   overflow-x: auto;
   overflow-y: auto;
-  }
-
-/*This is getting the background on everything below the nav bar
-*/
-
-.container {
-  height: auto;
-  background-image: linear-gradient(180deg, white, #ffe8c8);
-  }
-
-
-  /*This is getting the tables to alternate row colors and font
-*/
+}
 
 tr:nth-child(even) {
     background-color: #acd793;
@@ -71,18 +56,26 @@ table th {
   text-align: left;
 }
 
-
-  /*This is styling the text for the intro sections on each page
+/*Setting the background on everything below the nav bar
 */
+.container {
+  height: auto;
+  background-image: linear-gradient(180deg, white, #ffe8c8);
+}
 
+  /*Styling the text for the intro sections on each page
+*/
 p, ul {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-  /*This is styling the tables on the recipe page
+  /*Styling the tables on the recipe page
 */
+#recipetable {
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+}
 
 #recipes table {
   margin: 15px;
@@ -95,5 +88,4 @@ p, ul {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
   border-collapse: collapse;
-
 }

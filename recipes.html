@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <title>Recipes</title>
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -22,10 +23,13 @@
         </nav>
         <div class="container">
             <div class="text">
-                <p>The Recipe Section displays all the recipes used for ThirtyMeals.  You may notice that currently there are only five.  This is because I had to research and enter all data for ThirtyMeals and it will take a long time to enter in 25 more meals and ingredient data.  So for now, the imaginary person eating the food will have to be content with the same 5 meals for a year.  Sorry, bud.</p>
-
+                <p>
+                    The Recipe Section displays all the recipes used for ThirtyMeals.  You may notice that currently there are only five.  This is because I had to research and enter all data for ThirtyMeals and it will take a long time to enter in 25 more meals and ingredient data.  So for now, the imaginary person eating the food will have to be content with the same 5 meals for a year.  Sorry, bud.
+                </p>
             </div>
-            <div id="recipes"></div>
+            <div id="recipetable">
+                <div id="recipes"></div>
+            </div>
             <script type="py" src="recipes.py" config="./config.json"></script>
         </div>
     </body>
