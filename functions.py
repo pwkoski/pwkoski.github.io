@@ -3,6 +3,7 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
+
 #SUMMARY PAGE FUNCTIONS#
 #----------------------#
 
@@ -265,7 +266,7 @@ def generate_recipe_table(recipe_list):
    htmlString = ""
 
    #Iterate through recipes and create a table for each one
-   for i in range(0, len(recipe_list) - 1):
+   for i in range(0, len(recipe_list)):
      recipe = recipe_list[i]
      recipe_string = "<table>\n"
 

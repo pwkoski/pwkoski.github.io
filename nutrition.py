@@ -30,7 +30,7 @@ actual = [monthly_carbs, monthly_protein, monthly_fat]
 
 #Set up plots
 fig, (ax1, ax2) = plt.subplots(1, 2)
-fig.suptitle('Nutritional Information for One Month Period, 2,000 Calorie/Day Diet')
+fig.suptitle('Nutritional Differences for One Month Period, 2,000 Calorie/Day Diet')
 fig.set_figwidth(10)
 ax1.bar("Calories", monthly_caloric_limit, color='grey', label="Desired")
 ax1.bar("Calories", monthly_calories, color='red', label="Actual")
