@@ -22,7 +22,10 @@ monthly_calories = df['total_calories'].sum()
 #Calculate desired macros
 monthly_caloric_limit = 60000
 x = ['Carbs', 'Protein', 'Fat']
-desired = [0.5 * monthly_caloric_limit, 0.3 * monthly_caloric_limit, 0.2 * monthly_caloric_limit]
+desired_carbs = 8250.0 #275g per day for 30 days
+desired_protein = 5400.0 #180g per day for 30 days
+desired_fat = 2340.0 #78g per day for 30 days
+desired = [desired_carbs, desired_protein, desired_fat]
 actual = [monthly_carbs, monthly_protein, monthly_fat]
 
 #Set up plots
