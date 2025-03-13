@@ -10,9 +10,7 @@
   },
  "growth": {
    "grams_yield_per_plant": 187.62,
-   "plants_per_square_meter": 7.86,
-   "grow_length": 50,
-   "start_date": "06/01"
+   "plants_per_square_meter": 7.86
   },
   "storage": {
     "grams_per_container": 255.00,
@@ -40,9 +38,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 78.00,
-    "plants_per_square_meter": 13.12,
-    "grow_length": 70,
-    "start_date": "05/15"
+    "plants_per_square_meter": 13.12
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -70,9 +66,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 78.00,
-    "plants_per_square_meter": 13.12,
-    "grow_length": 40,
-    "start_date": "07/10"
+    "plants_per_square_meter": 13.12
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -100,9 +94,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 78.00,
-    "plants_per_square_meter": 13.12,
-    "grow_length": 60,
-    "start_date": "05/25"
+    "plants_per_square_meter": 13.12
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -130,9 +122,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 4535.92,
-    "plants_per_square_meter": 3.28,
-    "grow_length": 39,
-    "start_date": "06/01"
+    "plants_per_square_meter": 3.28
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -160,9 +150,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 4.80,
-    "plants_per_square_meter": 78.74,
-    "grow_length": 55,
-    "start_date": "05/05"
+    "plants_per_square_meter": 78.74
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -190,9 +178,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 720.00,
-    "plants_per_square_meter": 4.37,
-    "grow_length": 50,
-    "start_date": "06/10"
+    "plants_per_square_meter": 4.37
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -220,9 +206,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 240.00,
-    "plants_per_square_meter": 6.56,
-    "grow_length": 65,
-    "start_date": "05/10"
+    "plants_per_square_meter": 6.56
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -250,9 +234,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 78.00,
-    "plants_per_square_meter": 13.12,
-    "grow_length": 45,
-    "start_date": "06/20"
+    "plants_per_square_meter": 13.12
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -280,9 +262,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 82.50,
-    "plants_per_square_meter": 39.38,
-    "grow_length": 35,
-    "start_date": "07/10"
+    "plants_per_square_meter": 39.38
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -310,9 +290,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 150.00,
-    "plants_per_square_meter": 19.69,
-    "grow_length": 35,
-    "start_date": "06/15"
+    "plants_per_square_meter": 19.69
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -340,9 +318,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 2721.55,
-    "plants_per_square_meter": 9.84,
-    "grow_length": 45,
-    "start_date": "05/17"
+    "plants_per_square_meter": 9.84
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -370,9 +346,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 4.80,
-    "plants_per_square_meter": 78.74,
-    "grow_length": 55,
-    "start_date": "05/10"
+    "plants_per_square_meter": 78.74
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -400,9 +374,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 2271.24,
-    "plants_per_square_meter": 4.36,
-    "grow_length": 50,
-    "start_date": "05/25"
+    "plants_per_square_meter": 4.36
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -430,9 +402,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 595.00,
-    "plants_per_square_meter": 3.28,
-    "grow_length": 30,
-    "start_date": "06/10"
+    "plants_per_square_meter": 3.28
    },
    "storage": {
      "grams_per_container": 340.00,
