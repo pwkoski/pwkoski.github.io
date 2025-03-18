@@ -93,5 +93,16 @@ p, ul {
 }
 
 .javatable {
-  background-color: red;
+  width: 100%;
+  height: 600px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.javatable_active {
+  background-color: limegreen;
+}
+
+.javatable_not_active {
+  background-color: white;
 }
