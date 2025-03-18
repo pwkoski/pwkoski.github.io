@@ -1,7 +1,7 @@
 /**
  * The file contains styles for GWT widgets in the Clean theme.
  */
-
+/**
 body, table td, select, button {
   font-family: Arial Unicode MS, Arial, sans-serif;
   font-size: small;
@@ -31,6 +31,7 @@ a:hover {
 select {
   background: white;
 }
+*/
 
 /**
  * The reference theme can be used to determine when this style sheet has
