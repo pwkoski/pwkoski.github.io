@@ -11,7 +11,7 @@
  "growth": {
    "grams_yield_per_plant": 187.62,
    "plants_per_square_meter": 7.86,
-   "grow_length": 50,
+   "grow_length": 78,
    "start_date": "06/01"
   },
   "storage": {
@@ -41,8 +41,8 @@
   "growth": {
     "grams_yield_per_plant": 78.00,
     "plants_per_square_meter": 13.12,
-    "grow_length": 70,
-    "start_date": "05/15"
+    "grow_length": 100,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -71,8 +71,8 @@
   "growth": {
     "grams_yield_per_plant": 78.00,
     "plants_per_square_meter": 13.12,
-    "grow_length": 40,
-    "start_date": "07/10"
+    "grow_length": 90,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -101,8 +101,8 @@
   "growth": {
     "grams_yield_per_plant": 78.00,
     "plants_per_square_meter": 13.12,
-    "grow_length": 60,
-    "start_date": "05/25"
+    "grow_length": 100,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -131,7 +131,7 @@
   "growth": {
     "grams_yield_per_plant": 4535.92,
     "plants_per_square_meter": 3.28,
-    "grow_length": 39,
+    "grow_length": 75,
     "start_date": "06/01"
    },
    "storage": {
@@ -161,8 +161,8 @@
   "growth": {
     "grams_yield_per_plant": 4.80,
     "plants_per_square_meter": 78.74,
-    "grow_length": 55,
-    "start_date": "05/05"
+    "grow_length": 70,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -191,8 +191,8 @@
   "growth": {
     "grams_yield_per_plant": 720.00,
     "plants_per_square_meter": 4.37,
-    "grow_length": 50,
-    "start_date": "06/10"
+    "grow_length": 100,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -221,8 +221,8 @@
   "growth": {
     "grams_yield_per_plant": 240.00,
     "plants_per_square_meter": 6.56,
-    "grow_length": 65,
-    "start_date": "05/10"
+    "grow_length": 130,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -251,8 +251,8 @@
   "growth": {
     "grams_yield_per_plant": 78.00,
     "plants_per_square_meter": 13.12,
-    "grow_length": 45,
-    "start_date": "06/20"
+    "grow_length": 75,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -281,8 +281,8 @@
   "growth": {
     "grams_yield_per_plant": 82.50,
     "plants_per_square_meter": 39.38,
-    "grow_length": 35,
-    "start_date": "07/10"
+    "grow_length": 49,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -311,8 +311,8 @@
   "growth": {
     "grams_yield_per_plant": 150.00,
     "plants_per_square_meter": 19.69,
-    "grow_length": 35,
-    "start_date": "06/15"
+    "grow_length": 85,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -342,7 +342,7 @@
     "grams_yield_per_plant": 2721.55,
     "plants_per_square_meter": 9.84,
     "grow_length": 45,
-    "start_date": "05/17"
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -371,8 +371,8 @@
   "growth": {
     "grams_yield_per_plant": 4.80,
     "plants_per_square_meter": 78.74,
-    "grow_length": 55,
-    "start_date": "05/10"
+    "grow_length": 56,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 255.00,
@@ -401,8 +401,8 @@
   "growth": {
     "grams_yield_per_plant": 2271.24,
     "plants_per_square_meter": 4.36,
-    "grow_length": 50,
-    "start_date": "05/25"
+    "grow_length": 105,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -421,7 +421,7 @@
 
  {
   "info": {
-    "name": "chopped green pepper (frozen)",
+    "name": "chopped bell pepper (frozen)",
     "growable": true,
     "price_per_month": 0.00,
     "fresh": false,
@@ -431,8 +431,8 @@
   "growth": {
     "grams_yield_per_plant": 595.00,
     "plants_per_square_meter": 3.28,
-    "grow_length": 30,
-    "start_date": "06/10"
+    "grow_length": 65,
+    "start_date": "06/01"
    },
    "storage": {
      "grams_per_container": 340.00,
@@ -446,6 +446,96 @@
        "carb_percentage": 0.0482,
        "fat_percentage": 0.00,
        "calories_per_gram": 0.3012
+   }
+ },
+
+ {
+  "info": {
+    "name": "broccoli (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.3
+   },
+  "growth": {
+    "grams_yield_per_plant": 255.00,
+    "plants_per_square_meter": 8,
+    "grow_length": 52,
+    "start_date": "06/01"
+   },
+   "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0250,
+       "carb_percentage": 0.0777,
+       "fat_percentage": 0.00,
+       "calories_per_gram": 0.3889
+   }
+ },
+
+ {
+  "info": {
+    "name": "carrots (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.46
+   },
+  "growth": {
+    "grams_yield_per_plant": 72.00,
+    "plants_per_square_meter": 39,
+    "grow_length": 52,
+    "start_date": "06/01"
+   },
+   "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0098,
+       "carb_percentage": 0.0984,
+       "fat_percentage": 0.0016,
+       "calories_per_gram": 0.4098
+   }
+ },
+
+ {
+  "info": {
+    "name": "potatos (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.63
+   },
+  "growth": {
+    "grams_yield_per_plant": 800.00,
+    "plants_per_square_meter": 6,
+    "grow_length": 70,
+    "start_date": "06/01"
+   },
+   "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0202,
+       "carb_percentage": 0.1737,
+       "fat_percentage": 0.0009,
+       "calories_per_gram": 0.4098
    }
  }
 ]

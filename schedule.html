@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <img width="100%" viewBox="0 0 1914 270" src="/images/final.svg"><img>
@@ -25,8 +26,13 @@
                 </p>
             </div>
             <div id="javaschedule">
-                <script src="/gwt_output/mywebapp.nocache.js"></script>
+                <script src="./gwt_output/mywebapp.nocache.js"></script>
             </div>
         </div>
+        <script>
+       $(document).ready(function() {
+            $("javatable").wrapAll("<div class='javatablecontainer' />");
+         });
+        </script>
     </body>
 </html>

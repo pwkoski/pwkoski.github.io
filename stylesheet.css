@@ -92,7 +92,7 @@ p, ul {
   border-collapse: collapse;
 }
 
-.javatable {
+.javatablecontainer {
   width: 100%;
   height: 600px;
   overflow-x: auto;

@@ -51,10 +51,50 @@
     "tomatoes (canned)", 450.0,
     "kidney beans (canned)", 450.0,
     "chopped onion (frozen)", 450.0,
-    "chopped green pepper (frozen)", 240.0
+    "chopped bell pepper (frozen)", 240.0
   ],
   "recipe_calories": 1748.0,
   "source": "https://lovecannedfood.com/recipes/chili-con-carne-roasted-butternut-squash/"
+  },
+  {
+  "name": "Chicken Stir Fry",
+  "ingredients_and_amounts_in_milliliters": [
+    "broccoli (frozen)", 710.0,
+    "chopped bell pepper (frozen)", 500.0,
+    "carrots (frozen)", 240.0
+  ],
+  "recipe_calories": 2058.0,
+  "source": "https://www.momontimeout.com/easy-chicken-stir-fry-recipe/"
+  },
+  {
+  "name": "Old-Fashioned Potato Soup",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 710.0,
+    "potatos (frozen)", 1420.0,
+    "carrots (frozen)", 240.0
+  ],
+  "recipe_calories": 2028.0,
+  "source": "https://www.allrecipes.com/recipe/13043/old-fashioned-potato-soup/"
+  },
+  {
+  "name": "Old-Fashioned Potato Soup",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 710.0,
+    "potatos (frozen)", 1420.0,
+    "carrots (frozen)", 240.0
+  ],
+  "recipe_calories": 2028.0,
+  "source": "https://www.allrecipes.com/recipe/13043/old-fashioned-potato-soup/"
+  },
+  {
+  "name": "Easy Homemade Spaghetti",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 480.0,
+    "tomatoes (canned)", 830.0,
+    "carrots (frozen)", 240.0
+  ],
+  "recipe_calories": 2571.0,
+  "source": "https://www.themediterraneandish.com/spaghetti-sauce-recipe/"
   }
 ]
 }

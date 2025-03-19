@@ -296,7 +296,7 @@ def generate_recipe_table(recipe_list):
      ingredient_list = recipe['ingredients_and_amounts_in_milliliters']
 
      #Iterate through ingredients and put into table
-     for i in range(0, len(ingredient_list) - 2, 2):
+     for i in range(0, len(ingredient_list) - 1, 2):
       recipe_string = recipe_string + "<tr>" + "<td>" + str(ingredient_list[i + 1]) + " mL " + "</td>" + "<td>" + str(ingredient_list[i]) + "</td>" + "</tr>\n"
 
      #End table
