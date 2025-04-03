@@ -369,8 +369,8 @@
     "ingredient_grams_per_milliliter": 1.06
    },
   "growth": {
-    "grams_yield_per_plant": 4.80,
-    "plants_per_square_meter": 78.74,
+    "grams_yield_per_plant": 45.40,
+    "plants_per_square_meter": 40.0,
     "grow_length": 56,
     "start_date": "06/01"
    },
@@ -537,6 +537,217 @@
        "fat_percentage": 0.0009,
        "calories_per_gram": 0.4098
    }
+ },
+
+ {
+  "info": {
+    "name": "rutabaga (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.59
+   },
+  "growth": {
+    "grams_yield_per_plant": 386.00,
+    "plants_per_square_meter": 9,
+    "grow_length": 70,
+    "start_date": "07/01"
+   },
+  "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0107,
+       "carb_percentage": 0.0857,
+       "fat_percentage": 0.0014,
+       "calories_per_gram": 0.3714
+   }
+ },
+
+ {
+  "info": {
+    "name": "yellow peas (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.76
+   },
+  "growth": {
+    "grams_yield_per_plant": 45.40,
+    "plants_per_square_meter": 40.0,
+    "grow_length": 70,
+    "start_date": "06/01"
+   },
+   "storage": {
+    "grams_per_container": 340.00,
+    "storage_type": "frozen",
+    "storage": "1 gal bag",
+    "containers_per_square_meter": 0.00,
+    "containers_per_cubic_meter": 264.172
+   },
+  "nutrition": {
+       "protein_percentage": 0.2437,
+       "carb_percentage": 0.6041,
+       "fat_percentage": 0.0117,
+       "calories_per_gram": 3.40
+   }
+ },
+
+ {
+  "info": {
+    "name": "chopped cabbage (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.296
+   },
+  "growth": {
+    "grams_yield_per_plant": 907.00,
+    "plants_per_square_meter": 6.0,
+    "grow_length": 85,
+    "start_date": "06/01"
+   },
+   "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0128,
+       "carb_percentage": 0.0577,
+       "fat_percentage": 0.0010,
+       "calories_per_gram": 0.2460
+   }
+ },
+
+ {
+  "info": {
+    "name": "chopped purple onion (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.5368
+   },
+  "growth": {
+    "grams_yield_per_plant": 150.00,
+    "plants_per_square_meter": 19.69,
+    "grow_length": 85,
+    "start_date": "06/01"
+   },
+   "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0118,
+       "carb_percentage": 0.0941,
+       "fat_percentage": 0.00,
+       "calories_per_gram": 0.4118
+   }
+ },
+
+ {
+  "info": {
+    "name": "chopped cabbage sauerkraut (canned)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.296
+   },
+  "growth": {
+    "grams_yield_per_plant": 907.00,
+    "plants_per_square_meter": 6.0,
+    "grow_length": 85,
+    "start_date": "06/01"
+   },
+   "storage": {
+    "grams_per_container": 255.00,
+    "storage_type": "dry",
+    "storage": "16oz jar",
+    "containers_per_square_meter": 126.53,
+    "containers_per_cubic_meter": 0.00
+   },
+   "nutrition": {
+       "protein_percentage": 0.0128,
+       "carb_percentage": 0.0577,
+       "fat_percentage": 0.0010,
+       "calories_per_gram": 0.2460
+   }
+ },
+
+ {
+  "info": {
+    "name": "chopped spinach (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.127
+   },
+  "growth": {
+    "grams_yield_per_plant": 37.0,
+    "plants_per_square_meter": 12.0,
+    "grow_length": 45,
+    "start_date": "06/01"
+   },
+   "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0300,
+       "carb_percentage": 0.0367,
+       "fat_percentage": 0.0033,
+       "calories_per_gram": 0.2333
+   }
+ },
+
+ {
+  "info": {
+    "name": "chopped kale (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.089
+   },
+  "growth": {
+    "grams_yield_per_plant": 450.0,
+    "plants_per_square_meter": 6.0,
+    "grow_length": 75,
+    "start_date": "06/01"
+   },
+  "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+    },
+  "nutrition": {
+       "protein_percentage": 0.0192,
+       "carb_percentage": 0.0562,
+       "fat_percentage": 0.0038,
+       "calories_per_gram": 0.2769
+   }
  }
+
 ]
 }
