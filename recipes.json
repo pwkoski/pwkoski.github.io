@@ -77,16 +77,6 @@
   "source": "https://www.allrecipes.com/recipe/13043/old-fashioned-potato-soup/"
   },
   {
-  "name": "Old-Fashioned Potato Soup",
-  "ingredients_and_amounts_in_milliliters": [
-    "chopped onion (frozen)", 710.0,
-    "potatos (frozen)", 1420.0,
-    "carrots (frozen)", 240.0
-  ],
-  "recipe_calories": 2028.0,
-  "source": "https://www.allrecipes.com/recipe/13043/old-fashioned-potato-soup/"
-  },
-  {
   "name": "Easy Homemade Spaghetti",
   "ingredients_and_amounts_in_milliliters": [
     "chopped onion (frozen)", 480.0,
@@ -95,6 +85,93 @@
   ],
   "recipe_calories": 2571.0,
   "source": "https://www.themediterraneandish.com/spaghetti-sauce-recipe/"
+  },
+  {
+  "name": "Beef Mojakka (Family Recipe)",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 240.0,
+    "chopped celery (frozen)", 240.0,
+    "carrots (frozen)", 600.0,
+    "potatos (frozen)", 960.0,
+    "rutabaga (frozen)", 240.0
+  ],
+  "recipe_calories": 3000.0,
+  "source": "Hilja and Mary Koski"
+  },
+  {
+  "name": "Whole Pea Soup with Ham (Family Recipe)",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 240.0,
+    "chopped celery (frozen)", 240.0,
+    "carrots (frozen)", 240.0,
+    "potatos (frozen)", 240.0,
+    "yellow peas (frozen)", 480.0
+  ],
+  "recipe_calories": 3000.0,
+  "source": "Hilja and Mary Koski"
+  },
+  {
+  "name": "Egg Roll in a Bowl (Family Recipe)",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped purple onion (frozen)", 240.0,
+    "chopped cabbage (frozen)", 1920.0,
+    "carrots (frozen)", 480.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "Gina Koski"
+  },
+  {
+  "name": "Pork and Sauerkraut with Mashed Potatoes (Family Recipe)",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 720.0,
+    "chopped cabbage sauerkraut (canned)", 2500.0,
+    "potatos (frozen)", 960.0
+  ],
+  "recipe_calories": 4000.0,
+  "source": "Mary Koski"
+  },
+  {
+  "name": "Best Vegetable Lasagna",
+  "ingredients_and_amounts_in_milliliters": [
+    "carrots (frozen)", 240.0,
+    "chopped bell pepper (frozen)", 240.0,
+    "chopped zucchini (frozen)", 240.0,
+    "chopped onion (frozen)", 240.0,
+    "chopped spinach (frozen)", 240.0,
+    "tomatoes (canned)", 830.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "https://cookieandkate.com/best-vegetable-lasagna-recipe/"
+  },
+  {
+  "name": "Veggie Supreme Pizza",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped bell pepper (frozen)", 240.0,
+    "chopped purple onion (frozen)", 240.0,
+    "tomatoes (canned)", 480.0
+  ],
+  "recipe_calories": 1500.0,
+  "source": "https://www.thursdaynightpizza.com/the-best-veggie-supreme-pizza/"
+  },
+  {
+  "name": "Hidden Veggies Beef Burgers",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped zucchini (frozen)", 240.0,
+    "chopped onion (frozen)", 240.0,
+    "carrots (frozen)", 240.0
+  ],
+  "recipe_calories": 1062.0,
+  "source": "https://www.healthylittlefoodies.com/hidden-veggies-beef-burgers/"
+  },
+  {
+  "name": "Creamy One-Pot Butternut Squash Pasta with White Beans and Kale",
+  "ingredients_and_amounts_in_milliliters": [
+    "white beans (canned)", 480.0,
+    "chopped butternut squash (frozen)", 960.0,
+    "chopped kale (frozen)", 960.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "https://www.thekitchn.com/one-pot-butternut-squash-pasta-22948753"
   }
 ]
 }
