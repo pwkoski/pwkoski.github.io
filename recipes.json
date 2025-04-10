@@ -172,6 +172,126 @@
   ],
   "recipe_calories": 2000.0,
   "source": "https://www.thekitchn.com/one-pot-butternut-squash-pasta-22948753"
+  },
+  {
+  "name": "Borscht",
+  "ingredients_and_amounts_in_milliliters": [
+    "beets (frozen)", 960.0,
+    "carrots (frozen)", 480.0,
+    "chopped onion (frozen)", 350.0,
+    "potatos (frozen)", 240.0,
+    "chopped cabbage (frozen)", 480.0
+  ],
+  "recipe_calories": 2046.0,
+  "source": "https://www.simplyrecipes.com/recipes/borscht/"
+  },
+  {
+  "name": "Frozen Asparagus Risotto With Bacon",
+  "ingredients_and_amounts_in_milliliters": [
+    "asparagus (frozen)", 480.0,
+    "chopped onion (frozen)", 240.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "https://www.food.com/recipe/frozen-asparagus-risotto-with-bacon-364483"
+  },
+  {
+  "name": "Homemade Canned Dill Pickles",
+  "ingredients_and_amounts_in_milliliters": [
+    "cucumber pickles (canned)", 1200.0
+  ],
+  "recipe_calories": 500.0,
+  "source": "https://iwashyoudry.com/homemade-canned-dill-pickles/"
+  },
+  {
+  "name": "Ham & Veggie Casserole",
+  "ingredients_and_amounts_in_milliliters": [
+    "cauliflower (frozen)", 1200.0,
+    "broccoli (frozen)", 1200.0
+  ],
+  "recipe_calories": 1680.0,
+  "source": "https://www.tasteofhome.com/recipes/ham-veggie-casserole/"
+  },
+  {
+  "name": "Chopped Tex-Mex Ground Beef Taco Salad",
+  "ingredients_and_amounts_in_milliliters": [
+    "black beans (canned)", 450.0,
+    "chopped bell pepper (frozen)", 240.0,
+    "jalapeno (frozen)", 120.0,
+    "tomatoes (canned)", 480.0,
+    "chopped purple onion (frozen)", 240.0,
+    "corn (canned)", 240.0
+  ],
+  "recipe_calories": 4280.0,
+  "source": "https://ohsweetbasil.com/chopped-tex-mex-ground-beef-taco-salad-recipe/"
+  },
+  {
+  "name": "The Best Beef Stew",
+  "ingredients_and_amounts_in_milliliters": [
+    "potatos (frozen)", 720.0,
+    "chopped onion (frozen)", 720.0,
+    "carrots (frozen)", 480.0,
+    "green peas (canned)", 240.0,
+    "corn (canned)", 240.0
+  ],
+  "recipe_calories": 2196.0,
+  "source": "https://www.tasteofhome.com/recipes/the-best-beef-stew/"
+  },
+  {
+  "name": "Chicken Alfredo",
+  "ingredients_and_amounts_in_milliliters": [
+    "broccoli (frozen)", 480.0,
+    "chopped zucchini (frozen)", 480.0,
+    "chopped bell pepper (frozen)", 240.0
+  ],
+  "recipe_calories": 2580.0,
+  "source": "https://www.allrecipes.com/recipe/18444/chicken-alfredo/"
+  },
+  {
+  "name": "Rotisserie Chicken Noodle Soup",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped onion (frozen)", 240.0,
+    "carrots (frozen)", 240.0,
+    "chopped celery (frozen)", 240.0
+  ],
+  "recipe_calories": 1500.0,
+  "source": "https://www.southernliving.com/recipes/rotisserie-chicken-noodle-soup"
+  },
+  {
+  "name": "Beans, Greens and Cream",
+  "ingredients_and_amounts_in_milliliters": [
+    "chopped spinach (frozen)", 2000.0,
+    "white beans (canned)", 960.0
+  ],
+  "recipe_calories": 2610.0,
+  "source": "https://www.foodnetwork.com/recipes/food-network-kitchen/beans-greens-and-cream-18084054"
+  },
+  {
+  "name": "Lemon and Herb Roast Chicken and Vegetables",
+  "ingredients_and_amounts_in_milliliters": [
+    "potatos (frozen)", 480.0,
+    "carrots (frozen)", 240.0,
+    "chopped celery (frozen)", 240.0,
+    "chopped purple onion (frozen)", 240.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "https://www.foodnetwork.com/recipes/food-network-kitchen/lemon-and-herb-roast-chicken-and-vegetables-3362183"
+  },
+  {
+  "name": "Garlic Butter Steak Bites and Potatoes",
+  "ingredients_and_amounts_in_milliliters": [
+    "potatos (frozen)", 480.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "https://www.thecookierookie.com/garlic-butter-steak-and-potatoes/"
+  },
+  {
+  "name": "Mississippi Pot Roast",
+  "ingredients_and_amounts_in_milliliters": [
+    "carrots (frozen)", 480.0,
+    "pepperoncini (canned)", 480.0
+  ],
+  "recipe_calories": 2000.0,
+  "source": "Paul Koski"
   }
 ]
 }
