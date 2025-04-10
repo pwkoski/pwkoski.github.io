@@ -747,6 +747,186 @@
        "fat_percentage": 0.0038,
        "calories_per_gram": 0.2769
    }
+ },
+
+ {
+  "info": {
+    "name": "beets (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.575
+   },
+  "growth": {
+    "grams_yield_per_plant": 125.00,
+    "plants_per_square_meter": 18,
+    "grow_length": 56,
+    "start_date": "06/01"
+   },
+  "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0162,
+       "carb_percentage": 0.0956,
+       "fat_percentage": 0.0015,
+       "calories_per_gram": 0.4338
+   }
+ },
+
+ {
+  "info": {
+    "name": "asparagus (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.566
+   },
+  "growth": {
+    "grams_yield_per_plant": 20.00,
+    "plants_per_square_meter": 6,
+    "grow_length": 60,
+    "start_date": "05/01"
+   },
+  "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0250,
+       "carb_percentage": 0.0375,
+       "fat_percentage": 0.0001,
+       "calories_per_gram": 0.1875
+   }
+ },
+
+ {
+  "info": {
+    "name": "cucumber pickles (canned)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.503
+   },
+  "growth": {
+    "grams_yield_per_plant": 907.00,
+    "plants_per_square_meter": 1.5,
+    "grow_length": 51,
+    "start_date": "06/01"
+   },
+   "storage": {
+    "grams_per_container": 255.00,
+    "storage_type": "dry",
+    "storage": "16oz jar",
+    "containers_per_square_meter": 126.53,
+    "containers_per_cubic_meter": 0.00
+   },
+   "nutrition": {
+       "protein_percentage": 0.0065,
+       "carb_percentage": 0.0363,
+       "fat_percentage": 0.0010,
+       "calories_per_gram": 0.1492
+   }
+ },
+
+ {
+  "info": {
+    "name": "cauliflower (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.452
+   },
+  "growth": {
+    "grams_yield_per_plant": 907.00,
+    "plants_per_square_meter": 4,
+    "grow_length": 100,
+    "start_date": "06/01"
+   },
+  "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0187,
+       "carb_percentage": 0.0493,
+       "fat_percentage": 0.0027,
+       "calories_per_gram": 0.2483
+   }
+ },
+
+ {
+  "info": {
+    "name": "jalapeno (frozen)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.380
+   },
+  "growth": {
+    "grams_yield_per_plant": 600.00,
+    "plants_per_square_meter": 3,
+    "grow_length": 80,
+    "start_date": "06/01"
+   },
+  "storage": {
+     "grams_per_container": 340.00,
+     "storage_type": "frozen",
+     "storage": "1 gal bag",
+     "containers_per_square_meter": 0.00,
+     "containers_per_cubic_meter": 264.172
+   },
+   "nutrition": {
+       "protein_percentage": 0.0089,
+       "carb_percentage": 0.0666,
+       "fat_percentage": 0.0033,
+       "calories_per_gram": 0.2889
+   }
+ },
+
+ {
+  "info": {
+    "name": "pepperoncini (canned)",
+    "growable": true,
+    "price_per_month": 0.00,
+    "fresh": false,
+    "composite": false,
+    "ingredient_grams_per_milliliter": 0.380
+   },
+  "growth": {
+    "grams_yield_per_plant": 600.00,
+    "plants_per_square_meter": 3,
+    "grow_length": 80,
+    "start_date": "06/01"
+   },
+   "storage": {
+    "grams_per_container": 255.00,
+    "storage_type": "dry",
+    "storage": "16oz jar",
+    "containers_per_square_meter": 126.53,
+    "containers_per_cubic_meter": 0.00
+   },
+   "nutrition": {
+       "protein_percentage": 0.0089,
+       "carb_percentage": 0.0666,
+       "fat_percentage": 0.0033,
+       "calories_per_gram": 0.2889
+   }
  }
 
 ]
