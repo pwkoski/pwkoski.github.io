@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<body>
+<pre>
+package com.owc.mywebapp.mywebapp;
+
+import java.util.Date;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsonUtils;
+import com.google.gwt.storage.client.Storage;
+import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.RootPanel;
+
+public class App implements EntryPoint
+{
+
+  public void onModuleLoad()
+  {
+    FlexTable schedule = new FlexTable();
+    schedule.setBorderWidth(5);
+    schedule.addStyleName("javatable");
+    Storage data = null;
+    data = Storage.getSessionStorageIfSupported();
+
+    if (data != null)
+    {
+      //Get the dataframe portion of the sessionStorage object, a JSON string.
+      String df = data.getItem("df");
+
+      //Parse JSON string Store as a JSArray object
+      JSArray df_array = parseJson(df);
+
+      //Create a start date as 01May25
+      Date startDate = new Date(1746072000000L);
+
+      //Create top row of flextable with dates, 152 days between 01May and 30Sep
+      for (int i = 1; i <= 153; i++)
+      {
+        //Date format before: Thu May 01 00:00:00 GMT-400 2025
+        String shortened = startDate.toString().substring(4, 10);
+        //Date format after: May 01
+        schedule.setText(0, i, shortened);
+        startDate = addDays(startDate, 1);
+      }
+
+      //Create ingredient column on flexTable
+      for (int i = 0; i < df_array.length(); i++)
+      {
+        schedule.setText(i+1, 0, df_array.getItem(i));
+
+        //Fills in the schedule based on the date to start planting and the number of grow days
+        String plantDate = df_array.getStartDate(i);
+        int start = parseStartDate(plantDate);
+        for (int j=1; j <= 153; j++)
+        {
+          if (j >= start && j <= start + df_array.getDays(i))
+          {
+            schedule.getFlexCellFormatter().addStyleName(i+1, j, "javatable_active");
+          }
+          else
+          {
+            schedule.getFlexCellFormatter().addStyleName(i+1, j, "javatable_not_active");
+          }
+        }
+      }
+
+      //Add schedule to panel
+      RootPanel.get().add(schedule);
+    }
+
+  }
+
+  //Takes in a date string of the form "MM/DD" and returns the number of days after 05/01 that this date corresponds to.
+  //@param date: A String date of the form "MM/DD"
+  //@return: Number of days after 05/01 that input date corresponds to
+  private int parseStartDate(String date)
+  {
+    int month = 0;
+    int days;
+    String stringMonth = date.substring(0,2);
+    String stringDays = date.substring(3);
+    switch (stringMonth)
+    {
+      case "05":
+        month = 0;
+        break;
+      case "06":
+        month = 31;
+        break;
+      case "07":
+        month = 31 + 30;
+        break;
+      case "08":
+        month = 31 + 30 + 31;
+        break;
+      case "09":
+        month = 31 + 30 + 31 + 31;
+        break;
+    }
+
+    days = Integer.parseInt(stringDays);
+    return month + days;
+  }
+
+
+  //Parses a JSON string and casts as a mixed array
+  //@param jsonStr: The JSON string that has ingredient data.
+  //@return: A JsArrayMixed object that contains the ingredient data
+  public static < JsArrayMixed extends JavaScriptObject> JsArrayMixed parseJson(String jsonStr)
+  {
+    return JsonUtils.safeEval(jsonStr);
+  }
+
+
+  //Increments a Date object by a number of days and returns that new Date object
+  //@param dateIn: The Date object to start from
+  //@param numDays: The number of days to increment.
+  //@return: A new Date object that has been incremented from the previous.
+  private Date addDays(Date dateIn, int numDays)
+  {
+    // Number of milliseconds in a day
+    long milisPerDay = 86400000;
+
+    // convert the dateIn to milliseconds
+    long dateInMilis = dateIn.getTime();
+
+    // add numDays to the date
+    dateInMilis = dateInMilis + (numDays * milisPerDay);
+
+    return new Date(dateInMilis);
+  }
+
+  //A JSNI method that can be used to print to the browser console for debugging
+  /@param text: The string that you want to display to the browser console
+  //@return: None.
+  public static native void console(String text)
+  /*-{
+    console.log(text);
+  }-*/;
+
+}
+
+//An overlay class that is used to create a planting schedule.
+class JSArray extends JavaScriptObject
+{
+
+  // Overlay types always have protected, zero-arg ctors
+  protected JSArray() { }
+
+  //JSNI method that returns an ingredient name from the ingredient list
+  //@param i: The i-th ingredient of the ingredient list.
+  //@return: A string of the ingredient name
+  public final native String getItem(int i)
+  /*-{
+    return this.name[i];
+  }-*/;
+
+  //JSNI method that returns the length of the ingredient list
+  //@param: None.
+  //@return: Length of the ingredient list.
+  public final native int length()
+  /*-{
+    return Object.keys(this.name).length;
+  }-*/;
+
+  //JSNI method that returns the number of days to grow an ingredient from planting to harvest
+  //@param i: The i-th ingredient of the ingredient list
+  //@return: The number of days to grow the ingredient
+  public final native int getDays(int i)
+  /*-{
+    return this.grow_length[i];
+  }-*/;
+
+  //JSNI method that returns the recommended planting date for an ingredient
+  //@param i: The i-th ingredient of the ingredient list
+  //@return: The start date in a String format
+  public final native String getStartDate(int i)
+  /*-{
+    return this.start_date[i];
+  }-*/;
+
+}
+</pre>
+</body>
+</html>

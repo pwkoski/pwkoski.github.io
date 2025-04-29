@@ -195,10 +195,10 @@ def generate_garden_layout(fig, ax, ingredient_names, area_values, row_length_in
         ingredient_row_length_remaining = ingredient_row_length_remaining - row_remaining
         row_remaining = row_length_in_m
 
-  #Gets rid of duplicate legend entries and prepares the plot
+  #Gets rid of duplicate legend entries and prepares the plot (1.3, 0.5)
   handles, labels = plt.gca().get_legend_handles_labels()
   by_label = dict(zip(labels, handles))
-  plt.legend(by_label.values(), by_label.keys(), bbox_to_anchor = (1.25, 0.6), loc='center right')
+  plt.legend(by_label.values(), by_label.keys(), bbox_to_anchor = (1.3, 0.5), loc='center right', ncol=2)
   ax.set_title("Garden Layout")
   ax.set_xlabel("Garden Length (meters)")
   ax.set_ylabel("Row Length (meters)")
