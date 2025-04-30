@@ -130,7 +130,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 4535.92,
-    "plants_per_square_meter": 3.28,
+    "plants_per_square_meter": 2.0,
     "grow_length": 75,
     "start_date": "06/01"
    },
@@ -146,36 +146,6 @@
        "carb_percentage": 0.0413,
        "fat_percentage": 0.00,
        "calories_per_gram": 0.21
-   }
- },
-
- {
-  "info": {
-    "name": "black eyed peas (canned)",
-    "growable": true,
-    "price_per_month": 0.00,
-    "fresh": false,
-    "composite": false,
-    "ingredient_grams_per_milliliter": 1.06
-   },
-  "growth": {
-    "grams_yield_per_plant": 4.80,
-    "plants_per_square_meter": 78.74,
-    "grow_length": 70,
-    "start_date": "06/01"
-   },
-   "storage": {
-     "grams_per_container": 255.00,
-     "storage_type": "dry",
-     "storage": "16oz jar",
-     "containers_per_square_meter": 126.53,
-     "containers_per_cubic_meter": 0.00
-   },
-   "nutrition": {
-       "protein_percentage": 0.048,
-       "carb_percentage": 0.12,
-       "fat_percentage": 0.00,
-       "calories_per_gram": 0.80
    }
  },
 
@@ -206,36 +176,6 @@
        "carb_percentage": 0.0625,
        "fat_percentage": 0.00,
        "calories_per_gram": 0.291
-   }
- },
-
- {
-  "info": {
-    "name": "chopped celery (frozen)",
-    "growable": true,
-    "price_per_month": 0.00,
-    "fresh": false,
-    "composite": false,
-    "ingredient_grams_per_milliliter": 0.427
-   },
-  "growth": {
-    "grams_yield_per_plant": 240.00,
-    "plants_per_square_meter": 6.56,
-    "grow_length": 130,
-    "start_date": "06/01"
-   },
-   "storage": {
-     "grams_per_container": 340.00,
-     "storage_type": "frozen",
-     "storage": "1 gal bag",
-     "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 264.172
-   },
-   "nutrition": {
-       "protein_percentage": 0.0069,
-       "carb_percentage": 0.0297,
-       "fat_percentage": 0.00,
-       "calories_per_gram": 0.16
    }
  },
 
@@ -280,7 +220,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 82.50,
-    "plants_per_square_meter": 39.38,
+    "plants_per_square_meter": 16.0,
     "grow_length": 49,
     "start_date": "06/01"
    },
@@ -310,7 +250,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 150.00,
-    "plants_per_square_meter": 19.69,
+    "plants_per_square_meter": 10.0,
     "grow_length": 85,
     "start_date": "06/01"
    },
@@ -340,7 +280,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 2721.55,
-    "plants_per_square_meter": 9.84,
+    "plants_per_square_meter": 2.0,
     "grow_length": 45,
     "start_date": "06/01"
    },
@@ -370,7 +310,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 45.40,
-    "plants_per_square_meter": 40.0,
+    "plants_per_square_meter": 34.0,
     "grow_length": 56,
     "start_date": "06/01"
    },
@@ -400,7 +340,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 2271.24,
-    "plants_per_square_meter": 4.36,
+    "plants_per_square_meter": 2.0,
     "grow_length": 105,
     "start_date": "06/01"
    },
@@ -430,7 +370,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 595.00,
-    "plants_per_square_meter": 3.28,
+    "plants_per_square_meter": 2.0,
     "grow_length": 65,
     "start_date": "06/01"
    },
@@ -460,7 +400,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 255.00,
-    "plants_per_square_meter": 8,
+    "plants_per_square_meter": 2.0,
     "grow_length": 52,
     "start_date": "06/01"
    },
@@ -490,7 +430,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 72.00,
-    "plants_per_square_meter": 39,
+    "plants_per_square_meter": 34.0,
     "grow_length": 52,
     "start_date": "06/01"
    },
@@ -511,7 +451,7 @@
 
  {
   "info": {
-    "name": "potatos (frozen)",
+    "name": "potatoes (frozen)",
     "growable": true,
     "price_per_month": 0.00,
     "fresh": false,
@@ -520,7 +460,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 800.00,
-    "plants_per_square_meter": 6,
+    "plants_per_square_meter": 4.0,
     "grow_length": 70,
     "start_date": "06/01"
    },
@@ -550,7 +490,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 386.00,
-    "plants_per_square_meter": 9,
+    "plants_per_square_meter": 6.0,
     "grow_length": 70,
     "start_date": "07/01"
    },
@@ -580,7 +520,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 45.40,
-    "plants_per_square_meter": 40.0,
+    "plants_per_square_meter": 34.0,
     "grow_length": 70,
     "start_date": "06/01"
    },
@@ -610,7 +550,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 907.00,
-    "plants_per_square_meter": 6.0,
+    "plants_per_square_meter": 4.0,
     "grow_length": 85,
     "start_date": "06/01"
    },
@@ -640,7 +580,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 150.00,
-    "plants_per_square_meter": 19.69,
+    "plants_per_square_meter": 10.0,
     "grow_length": 85,
     "start_date": "06/01"
    },
@@ -670,7 +610,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 907.00,
-    "plants_per_square_meter": 6.0,
+    "plants_per_square_meter": 4.0,
     "grow_length": 85,
     "start_date": "06/01"
    },
@@ -730,7 +670,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 450.0,
-    "plants_per_square_meter": 6.0,
+    "plants_per_square_meter": 2.0,
     "grow_length": 75,
     "start_date": "06/01"
    },
@@ -760,7 +700,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 125.00,
-    "plants_per_square_meter": 18,
+    "plants_per_square_meter": 18.0,
     "grow_length": 56,
     "start_date": "06/01"
    },
@@ -776,36 +716,6 @@
        "carb_percentage": 0.0956,
        "fat_percentage": 0.0015,
        "calories_per_gram": 0.4338
-   }
- },
-
- {
-  "info": {
-    "name": "asparagus (frozen)",
-    "growable": true,
-    "price_per_month": 0.00,
-    "fresh": false,
-    "composite": false,
-    "ingredient_grams_per_milliliter": 0.566
-   },
-  "growth": {
-    "grams_yield_per_plant": 20.00,
-    "plants_per_square_meter": 6,
-    "grow_length": 60,
-    "start_date": "05/01"
-   },
-  "storage": {
-     "grams_per_container": 340.00,
-     "storage_type": "frozen",
-     "storage": "1 gal bag",
-     "containers_per_square_meter": 0.00,
-     "containers_per_cubic_meter": 264.172
-   },
-   "nutrition": {
-       "protein_percentage": 0.0250,
-       "carb_percentage": 0.0375,
-       "fat_percentage": 0.0001,
-       "calories_per_gram": 0.1875
    }
  },
 
@@ -850,7 +760,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 907.00,
-    "plants_per_square_meter": 4,
+    "plants_per_square_meter": 2.0,
     "grow_length": 100,
     "start_date": "06/01"
    },
@@ -880,7 +790,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 600.00,
-    "plants_per_square_meter": 3,
+    "plants_per_square_meter": 3.0,
     "grow_length": 80,
     "start_date": "06/01"
    },
@@ -910,7 +820,7 @@
    },
   "growth": {
     "grams_yield_per_plant": 600.00,
-    "plants_per_square_meter": 3,
+    "plants_per_square_meter": 3.0,
     "grow_length": 80,
     "start_date": "06/01"
    },
