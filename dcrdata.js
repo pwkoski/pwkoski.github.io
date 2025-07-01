@@ -24,7 +24,7 @@ export const data = [
     "eveningActivities": "Trip to farm supply store to purchase fencing",
     "manHours": ["Paul", 11.0, "Derek", 11.0, "Joslyn", 5.0],
     "purchases": ["Fenceposts", 300.00],
-    "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
+    "image_url": ["https://picsum.photos/400", "https://picsum.photos/300", "https://picsum.photos/200"],
   },
   {
     "date": "Monday, June 9th, 2025",
@@ -37,7 +37,7 @@ export const data = [
     "eveningActivities": "Pick up fencing 2 heavy duty, 1 light duty, work gloves, and zip ties from Menards. Pick up fence pounder/work gloves/hoe/ladder from parents.",
     "manHours": ["Paul", 3.0, "Derek", 0.0],
     "purchases": ["Fencing", 90.00],
-    "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
+    "image_url": ["https://picsum.photos/300", "https://picsum.photos/400", "https://picsum.photos/300"],
   },
 
 ]
