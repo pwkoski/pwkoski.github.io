@@ -69,8 +69,8 @@ p, ul {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-  /*Styling the tables on the recipe page
-*/
+/*Styling the tables on the recipe page */
+
 #recipetable {
   width: 100%;
   min-height: 600px;
@@ -105,4 +105,86 @@ p, ul {
 
 .javatable_not_active {
   background-color: white;
+}
+
+
+/*Styling the DCR */
+
+#titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+
+
+}
+
+#prev {
+  padding: 5px;
+}
+
+#title {
+  padding: 5px;
+}
+
+#next {
+  padding: 5px;
+}
+
+#pictures {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  overflow-x: auto;
+}
+
+#pictures img {
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  margin: 5px;
+  border-style: solid;
+  overflow-x: auto;
+}
+
+#weather {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#weather td {
+  background-color: white;
+}
+
+#visitorsDiv {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+#visitorsText {
+  padding: 5px;
+}
+
+#dayActivitiesDiv {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+#dayActivitiesText {
+  padding: 5px;
+}
+
+#eveningActivitiesDiv {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+#eveningActivitiesText {
+  padding: 5px;
 }
