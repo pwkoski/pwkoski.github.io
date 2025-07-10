@@ -149,14 +149,72 @@ p, ul {
   overflow-x: auto;
 }
 
-#weather {
-  width: 100%;
+#weatherGardenContainer {
   display: flex;
   justify-content: center;
+  align-items: baseline;
+}
+
+#weather {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 25px;
 }
 
 #weather td {
   background-color: white;
+}
+
+#gardenlayout td {
+  border:1px solid gray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8pt;
+  height:10px;
+  width:50px;
+
+}
+
+#unknown a {
+  background-color: black;
+  color: white;
+}
+
+#jalapenos {
+  background-color: green;
+}
+
+#tomatoes {
+  background-color: red;
+}
+
+#bellPeppers {
+  background-color: blue;
+}
+
+#beets {
+  background-color: purple;
+}
+
+#onions {
+  background-color: yellow;
+}
+
+#zucchini {
+  background-color: green;
+}
+
+#carrots {
+  background-color: orange;
+}
+
+#squash {
+  background-color: lightgoldenrodyellow;
+}
+
+#peas {
+  background-color: yellowgreen;
 }
 
 #visitorsDiv {

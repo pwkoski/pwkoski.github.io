@@ -1,9 +1,69 @@
 import { data } from "./dcrdata.js";
 
+const layout = [
+
+  {
+    "name": "",
+    "grid": [0,0,0,0],
+    "link": ""
+  },
+  {
+    "name": "unknown",
+    "grid": [0,0,39,0],
+    "link": ""
+  },
+  {
+    "name": "jalapenos",
+    "grid": [0,1,2,1],
+    "link": "https://www.burpee.com/pepper-hot-jalapeno-early-prod099710.html?srsltid=AfmBOopFVYjX9S6dVgljv6wQd-z3L4Fy48KItz9h4ud87dpZoNHdWyxn"
+  },
+  {
+    "name": "tomatoes",
+    "grid": [3,1,39,1],
+    "link": ""
+  },
+  {
+    "name": "bellPeppers",
+    "grid": [0,2,7,2],
+    "link": ""
+  },
+  {
+    "name": "beets",
+    "grid": [8,2,11,2],
+    "link": ""
+  },
+  {
+    "name": "onions",
+    "grid": [12,2,39,2],
+    "link": ""
+  },
+  {
+    "name": "zucchini",
+    "grid": [0,3,11,3],
+    "link": ""
+  },
+  {
+    "name": "carrots",
+    "grid": [12,3,39,3],
+    "link": ""
+  },
+  {
+    "name": "squash",
+    "grid": [0,4,14,4],
+    "link": ""
+  },
+  {
+    "name": "peas",
+    "grid": [15,4,39,4],
+    "link": ""
+  }
+
+]
+
 let page = 0;
 generateDCR(page);
 
-//LAYOUT, MAN HOURS, PURCHASES, PHOTO CORRECT
+//LAYOUT finish, maybe put activities next to it, MAN HOURS, PURCHASES, PHOTO CORRECT
 
 function generateDCR(pageNumber) {
 
@@ -12,7 +72,7 @@ function generateDCR(pageNumber) {
   addNext();
   addPictures(pageNumber);
   addWeather(pageNumber);
-  addLayout();
+  addLayout(40, 10, layout);
   addActivities(pageNumber);
   addManHours(pageNumber);
   addPurchases(pageNumber);
@@ -166,9 +226,93 @@ function addWeather(pageNumber) {
 
 }
 
-function addLayout() {
 
-}
+//I: rows, columns, A JSON type variable with an array of ingredient objects.  Each object has
+//name string, grid occupancy on a rowxcolumn matrix in [R1,C1,R2,C2] format, and link.
+//O: An HTML table with each cell containing information from the JSON.
+//C: Limited to a 40x50 table to correspond with actual grow area
+//E:
+
+//strategy: Iterate through JSON and create a matrix with all the data.  Pass the matrix to the table creator function.  Iterate through matrix, creating rows as necessary.
+
+//Create empty matrix.  Iterate through JSON and put data into matrix.  Pass matrix to table creator function.
+
+//data[pageNumber].highTemp
+// const data = [
+//   {
+//     "date": "Saturday, June 7th, 2025",
+//     "highTemp": 51.0,
+//     "lowTemp": 65.0,
+//     "precip": 0.35,
+//     "watering": "N/A",
+//     "visitors": "None",
+//     "dayActivities": "Weld tiller, measure and stake out area. Remove weeds, mow, till soil to break up thatch, hand sift thatch from soil and dispose",
+//     "eveningActivities": "None",
+//     "manHours": ["Paul", 7.5, "Derek", 7.5],
+//     "purchases": ["Seeds, Stakes, Twine", 90.00],
+//     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
+//   }]
+
+
+
+function addLayout(noRow, noColumn, layout) {
+
+    //Create empty matrix
+    let layoutMatrix = [];
+
+    for ( let y = 0; y < noRow; y++ ) {
+      layoutMatrix[ y ] = [];
+      for ( let x = 0; x < noColumn; x++ ) {
+        layoutMatrix[ y ][ x ] = "";
+      }
+    }
+
+    //Fill matrix with data
+    for ( let n = 0; n < layout.length; n++) {
+
+      let rowStart = layout[n].grid[0];
+      let colStart = layout[n].grid[1];
+      let rowEnd = layout[n].grid[2];
+      let colEnd = layout[n].grid[3];
+
+      for ( let x = rowStart; x <= rowEnd; x++ ) {
+        layoutMatrix[x][colStart] = {name: layout[n].name, link: layout[n].link}
+      }
+    }
+
+    //Check to see:
+    //console.log("this is layoutMatrix: ", layoutMatrix);
+
+    //Create HTML table
+    const tbl = document.createElement("table");
+    const tblBody = document.createElement("tbody");
+
+    for (let i = 0; i < noRow; i++) {
+      const row = document.createElement("tr");
+
+      for (let j = 0; j < noColumn; j++) {
+        const cell = document.createElement("td");
+        if (layoutMatrix[i][j] != "") {
+          let a = document.createElement('a');
+          a.title = layoutMatrix[i][j].name;
+          a.href = layoutMatrix[i][j].link;
+          let linkText = document.createTextNode(layoutMatrix[i][j].name);
+          a.appendChild(linkText);
+          cell.appendChild(a);
+          cell.setAttribute("id", layoutMatrix[i][j].name);
+        }
+        row.appendChild(cell);
+      }
+
+      tblBody.appendChild(row);
+    }
+
+    tbl.appendChild(tblBody);
+
+    //Get div for table
+    const layoutDiv = document.getElementById("gardenlayout");
+    layoutDiv.appendChild(tbl);
+  }
 
 function addActivities(pageNumber) {
 
