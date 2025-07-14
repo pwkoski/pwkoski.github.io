@@ -63,7 +63,7 @@ const layout = [
 let page = 0;
 generateDCR(page);
 
-//LAYOUT finish, maybe put activities next to it, MAN HOURS, PURCHASES, PHOTO CORRECT
+//LAYOUT finish, can't seem to get that first table to play nice, maybe put activities next to it, MAN HOURS, PURCHASES, PHOTO CORRECT
 
 function generateDCR(pageNumber) {
 
@@ -157,6 +157,8 @@ function addWeather(pageNumber) {
   // get the weather div
   const weatherDiv = document.getElementById("weather");
 
+
+
   // clear weather content
   weatherDiv.innerHTML = "";
 
@@ -219,7 +221,9 @@ function addWeather(pageNumber) {
   weatherTableBody.appendChild(row4);
 
   //Append table body to table
+  weatherTableBody.setAttribute("id", "weather");
   weatherTable.appendChild(weatherTableBody);
+  weatherTable.setAttribute("id", "weather");
 
   // add the weather table to the weather div
   weatherDiv.appendChild(weatherTable);
@@ -283,8 +287,9 @@ function addLayout(noRow, noColumn, layout) {
     //Check to see:
     //console.log("this is layoutMatrix: ", layoutMatrix);
 
-    //Create HTML table
+    //Create layout HTML table
     const tbl = document.createElement("table");
+    tbl.setAttribute("id", "gardenlayout");
     const tblBody = document.createElement("tbody");
 
     for (let i = 0; i < noRow; i++) {
@@ -292,15 +297,7 @@ function addLayout(noRow, noColumn, layout) {
 
       for (let j = 0; j < noColumn; j++) {
         const cell = document.createElement("td");
-        if (layoutMatrix[i][j] != "") {
-          let a = document.createElement('a');
-          a.title = layoutMatrix[i][j].name;
-          a.href = layoutMatrix[i][j].link;
-          let linkText = document.createTextNode(layoutMatrix[i][j].name);
-          a.appendChild(linkText);
-          cell.appendChild(a);
-          cell.setAttribute("id", layoutMatrix[i][j].name);
-        }
+        cell.setAttribute("class", layoutMatrix[i][j].name);
         row.appendChild(cell);
       }
 
@@ -312,6 +309,54 @@ function addLayout(noRow, noColumn, layout) {
     //Get div for table
     const layoutDiv = document.getElementById("gardenlayout");
     layoutDiv.appendChild(tbl);
+
+    //Create legend
+    const legendDiv = document.getElementById("legend");
+    const legend = document.createElement("table");
+    legend.setAttribute("id", "legend");
+    const legendBody = document.createElement("tbody");
+
+    for (let i = 1; i < layout.length; i++) {
+      const legendrow = document.createElement("tr");
+      // const cell1 = document.createElement("td");
+      // cell1.setAttribute("class", layout[i].name);
+      // legendrow.appendChild(cell1);
+      const cell2 = document.createElement("td");
+      let a = document.createElement('a');
+      a.title = layout[i].name;
+      a.href = layout[i].link;
+      let linkText = document.createTextNode(layout[i].name);
+      a.appendChild(linkText);
+      cell2.appendChild(a);
+      cell2.setAttribute("class", layout[i].name);
+      cell2.addEventListener("mouseenter", hightlight);
+      cell2.addEventListener("mouseleave", reverse);
+      legendrow.appendChild(cell2);
+      legendBody.appendChild(legendrow);
+    }
+
+    legend.appendChild(legendBody);
+    legendDiv.appendChild(legend);
+
+     //helper functions
+     function hightlight(evt) {
+       let oldClassName = evt.target.className;
+       let targets = document.getElementsByClassName(evt.target.className);
+       let targetsArray = Array.from(targets);
+       for (let i = 0; i < targetsArray.length; i++) {
+        targetsArray[i].className = "legendHighlight";
+       }
+     }
+
+     function reverse(evt) {
+      let newClassName = evt.target.innerText;
+      let targets = document.getElementsByClassName("legendHighlight");
+      let targetsArray = Array.from(targets);
+      for (let i = 0; i < targetsArray.length; i++) {
+        targetsArray[i].className = newClassName;
+      }
+     }
+
   }
 
 function addActivities(pageNumber) {
