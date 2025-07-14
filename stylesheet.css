@@ -150,70 +150,98 @@ p, ul {
 }
 
 #weatherGardenContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  overflow-x: auto;
 }
 
 #weather {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  margin: 25px;
+  flex-shrink: 0;
+  min-width: fit-content;
 }
 
 #weather td {
   background-color: white;
 }
 
+#gardenlayout {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 #gardenlayout td {
   border:1px solid gray;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 8pt;
-  height:10px;
-  width:50px;
+  min-height:5px;
+  min-width:35px;
 
 }
 
-#unknown a {
+.legendHighlight {
   background-color: black;
+}
+
+.legendHighlight a {
   color: white;
 }
 
-#jalapenos {
+.unknown {
+  background-color: white;
+}
+
+.jalapenos {
   background-color: green;
 }
 
-#tomatoes {
+.jalapenos a {
+  color: white;
+}
+
+.tomatoes {
   background-color: red;
 }
 
-#bellPeppers {
+.bellPeppers {
   background-color: blue;
 }
 
-#beets {
+.bellPeppers a {
+  color: white;
+}
+
+.beets {
   background-color: purple;
 }
 
-#onions {
+.beets a {
+  color: white;
+}
+
+.onions {
   background-color: yellow;
 }
 
-#zucchini {
+.zucchini {
   background-color: green;
 }
 
-#carrots {
+.zucchini a {
+  color: white;
+}
+
+.carrots {
   background-color: orange;
 }
 
-#squash {
+.squash {
   background-color: lightgoldenrodyellow;
 }
 
-#peas {
+.peas {
   background-color: yellowgreen;
 }
 
