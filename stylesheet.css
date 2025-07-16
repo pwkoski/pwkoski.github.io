@@ -116,8 +116,6 @@ p, ul {
   justify-content: center;
   align-items: baseline;
 
-
-
 }
 
 #prev {
@@ -137,7 +135,6 @@ p, ul {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  overflow-x: auto;
 }
 
 #pictures img {
@@ -149,17 +146,21 @@ p, ul {
   overflow-x: auto;
 }
 
-#weatherGardenContainer {
+#overflowContainer {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow-x: auto;
 }
 
+#weatherGardenContainer {
+  min-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #weather {
-  flex-shrink: 0;
-  min-width: fit-content;
+  padding: 5px;
+  margin: 5px;
 }
 
 #weather td {
@@ -167,25 +168,27 @@ p, ul {
 }
 
 #gardenlayout {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
+  padding: 5px;
+  margin: 5px;
+
 }
 
 #gardenlayout td {
   border:1px solid gray;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 8pt;
-  min-height:5px;
-  min-width:35px;
+  min-height: 5px;
+  min-width: 35px;
 
+}
+
+#legend {
+  padding: 5px;
+  margin: 5px;
 }
 
 .legendHighlight {
   background-color: black;
-}
-
-.legendHighlight a {
   color: white;
 }
 
@@ -195,9 +198,6 @@ p, ul {
 
 .jalapenos {
   background-color: green;
-}
-
-.jalapenos a {
   color: white;
 }
 
@@ -207,17 +207,11 @@ p, ul {
 
 .bellPeppers {
   background-color: blue;
-}
-
-.bellPeppers a {
   color: white;
 }
 
 .beets {
   background-color: purple;
-}
-
-.beets a {
   color: white;
 }
 
@@ -227,9 +221,6 @@ p, ul {
 
 .zucchini {
   background-color: green;
-}
-
-.zucchini a {
   color: white;
 }
 
@@ -243,6 +234,43 @@ p, ul {
 
 .peas {
   background-color: yellowgreen;
+}
+
+.potatoes {
+  background-color: brown;
+  color: white;
+}
+
+.greenbeans {
+  background-color: darkgreen;
+  color: white;
+}
+
+.kale {
+  background-color: darkcyan;
+  color: white;
+}
+
+.cabbage {
+  background-color: lawngreen;
+}
+
+.broccoli {
+  background-color: olive;
+  color: white;
+}
+
+.cauliflower {
+  background-color: moccasin;
+}
+
+.spinach {
+  background-color: springgreen;
+}
+
+.cucumbers {
+  background-color: seagreen;
+  color: white;
 }
 
 #visitorsDiv {
