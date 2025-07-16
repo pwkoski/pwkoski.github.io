@@ -1,69 +1,10 @@
 import { data } from "./dcrdata.js";
-
-const layout = [
-
-  {
-    "name": "",
-    "grid": [0,0,0,0],
-    "link": ""
-  },
-  {
-    "name": "unknown",
-    "grid": [0,0,39,0],
-    "link": ""
-  },
-  {
-    "name": "jalapenos",
-    "grid": [0,1,2,1],
-    "link": "https://www.burpee.com/pepper-hot-jalapeno-early-prod099710.html?srsltid=AfmBOopFVYjX9S6dVgljv6wQd-z3L4Fy48KItz9h4ud87dpZoNHdWyxn"
-  },
-  {
-    "name": "tomatoes",
-    "grid": [3,1,39,1],
-    "link": ""
-  },
-  {
-    "name": "bellPeppers",
-    "grid": [0,2,7,2],
-    "link": ""
-  },
-  {
-    "name": "beets",
-    "grid": [8,2,11,2],
-    "link": ""
-  },
-  {
-    "name": "onions",
-    "grid": [12,2,39,2],
-    "link": ""
-  },
-  {
-    "name": "zucchini",
-    "grid": [0,3,11,3],
-    "link": ""
-  },
-  {
-    "name": "carrots",
-    "grid": [12,3,39,3],
-    "link": ""
-  },
-  {
-    "name": "squash",
-    "grid": [0,4,14,4],
-    "link": ""
-  },
-  {
-    "name": "peas",
-    "grid": [15,4,39,4],
-    "link": ""
-  }
-
-]
+import { layout } from "./dcrlayoutdata.js";
 
 let page = 0;
 generateDCR(page);
 
-//LAYOUT finish, can't seem to get that first table to play nice, maybe put activities next to it, MAN HOURS, PURCHASES, PHOTO CORRECT
+//MAN HOURS, PURCHASES, PHOTO CORRECT
 
 function generateDCR(pageNumber) {
 
@@ -71,6 +12,7 @@ function generateDCR(pageNumber) {
   addTitle(pageNumber);
   addNext();
   addPictures(pageNumber);
+  clearWeatherAndLayoutContainer();
   addWeather(pageNumber);
   addLayout(40, 10, layout);
   addActivities(pageNumber);
@@ -152,15 +94,18 @@ function addPictures(pageNumber) {
 
 }
 
+function   clearWeatherAndLayoutContainer() {
+  //get container div
+  const containerDiv = document.getElementById("weatherGardenContainer");
+  //clear existing content
+  containerDiv.innerHTML = "";
+}
+
 function addWeather(pageNumber) {
 
-  // get the weather div
-  const weatherDiv = document.getElementById("weather");
-
-
-
-  // clear weather content
-  weatherDiv.innerHTML = "";
+  //create the weather div
+  const weatherDiv = document.createElement('div');
+  weatherDiv.setAttribute("id", "weather");
 
   // weather content
   const weatherHighTempText = document.createTextNode("High Temperature (F): ");
@@ -221,44 +166,24 @@ function addWeather(pageNumber) {
   weatherTableBody.appendChild(row4);
 
   //Append table body to table
-  weatherTableBody.setAttribute("id", "weather");
   weatherTable.appendChild(weatherTableBody);
-  weatherTable.setAttribute("id", "weather");
 
   // add the weather table to the weather div
   weatherDiv.appendChild(weatherTable);
 
+  //get the weather and layout container div
+  const containerDiv = document.getElementById("weatherGardenContainer");
+
+  //append weatherDiv to containerDiv
+  containerDiv.appendChild(weatherDiv);
+
 }
 
-
-//I: rows, columns, A JSON type variable with an array of ingredient objects.  Each object has
-//name string, grid occupancy on a rowxcolumn matrix in [R1,C1,R2,C2] format, and link.
-//O: An HTML table with each cell containing information from the JSON.
-//C: Limited to a 40x50 table to correspond with actual grow area
-//E:
-
-//strategy: Iterate through JSON and create a matrix with all the data.  Pass the matrix to the table creator function.  Iterate through matrix, creating rows as necessary.
-
-//Create empty matrix.  Iterate through JSON and put data into matrix.  Pass matrix to table creator function.
-
-//data[pageNumber].highTemp
-// const data = [
-//   {
-//     "date": "Saturday, June 7th, 2025",
-//     "highTemp": 51.0,
-//     "lowTemp": 65.0,
-//     "precip": 0.35,
-//     "watering": "N/A",
-//     "visitors": "None",
-//     "dayActivities": "Weld tiller, measure and stake out area. Remove weeds, mow, till soil to break up thatch, hand sift thatch from soil and dispose",
-//     "eveningActivities": "None",
-//     "manHours": ["Paul", 7.5, "Derek", 7.5],
-//     "purchases": ["Seeds, Stakes, Twine", 90.00],
-//     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
-//   }]
-
-
-
+//addLayout: creates the layout and legend and appends to the weather and layout container
+//@param: noRow, number of rows in the layout
+//@param: noColumn, number of columns in the layout
+//@param: layout, array of ingredient objects with name string, grid occupancy on a rowxcolumn matrix in [R1,C1,R2,C2] format, and link.
+//@return: none, modifies DOM
 function addLayout(noRow, noColumn, layout) {
 
     //Create empty matrix
@@ -284,12 +209,8 @@ function addLayout(noRow, noColumn, layout) {
       }
     }
 
-    //Check to see:
-    //console.log("this is layoutMatrix: ", layoutMatrix);
-
     //Create layout HTML table
     const tbl = document.createElement("table");
-    tbl.setAttribute("id", "gardenlayout");
     const tblBody = document.createElement("tbody");
 
     for (let i = 0; i < noRow; i++) {
@@ -306,41 +227,57 @@ function addLayout(noRow, noColumn, layout) {
 
     tbl.appendChild(tblBody);
 
-    //Get div for table
-    const layoutDiv = document.getElementById("gardenlayout");
+
+    //Create div for layout
+    const layoutDiv = document.createElement('div');
+    layoutDiv.setAttribute("id", "gardenlayout");
+    //add table to layoutdiv
     layoutDiv.appendChild(tbl);
 
-    //Create legend
-    const legendDiv = document.getElementById("legend");
+    //Create div for legend
+    const legendDiv = document.createElement('div');
+    legendDiv.setAttribute("id", "legend");
+
+    //Create legend table
     const legend = document.createElement("table");
-    legend.setAttribute("id", "legend");
     const legendBody = document.createElement("tbody");
 
+    //Create flag for "unknown" so multiple entries aren't made
+    let foundUnknown = false;
     for (let i = 1; i < layout.length; i++) {
-      const legendrow = document.createElement("tr");
-      // const cell1 = document.createElement("td");
-      // cell1.setAttribute("class", layout[i].name);
-      // legendrow.appendChild(cell1);
-      const cell2 = document.createElement("td");
-      let a = document.createElement('a');
-      a.title = layout[i].name;
-      a.href = layout[i].link;
-      let linkText = document.createTextNode(layout[i].name);
-      a.appendChild(linkText);
-      cell2.appendChild(a);
-      cell2.setAttribute("class", layout[i].name);
-      cell2.addEventListener("mouseenter", hightlight);
-      cell2.addEventListener("mouseleave", reverse);
-      legendrow.appendChild(cell2);
-      legendBody.appendChild(legendrow);
+      if (layout[i].name == "unknown" && foundUnknown == true) {
+        continue;
+      }
+      else {
+        if (layout[i].name == "unknown") foundUnknown = true;
+        const legendrow = document.createElement("tr");
+        const cell = document.createElement("td");
+        let linkText = document.createTextNode(layout[i].name);
+        cell.appendChild(linkText);
+        cell.setAttribute("class", layout[i].name);
+        cell.addEventListener("mouseenter", hightlight);
+        cell.addEventListener("mouseleave", reverse);
+        legendrow.appendChild(cell);
+        legendBody.appendChild(legendrow);
+      }
+
     }
 
+    //Append body to table
     legend.appendChild(legendBody);
+    //Append table to div
     legendDiv.appendChild(legend);
+
+    //Append layout div and legend div to container div
+    //get the weather and layout container div
+    const containerDiv = document.getElementById("weatherGardenContainer");
+    //append layoutDiv to containerDiv
+    containerDiv.appendChild(layoutDiv);
+    //append legendDiv to containerDiv
+    containerDiv.appendChild(legendDiv);
 
      //helper functions
      function hightlight(evt) {
-       let oldClassName = evt.target.className;
        let targets = document.getElementsByClassName(evt.target.className);
        let targetsArray = Array.from(targets);
        for (let i = 0; i < targetsArray.length; i++) {
@@ -412,6 +349,24 @@ function addActivities(pageNumber) {
   activitiesDiv.appendChild(dayActivitiesDiv);
   activitiesDiv.appendChild(eveningActivitiesDiv);
 }
+
+
+//data[pageNumber].highTemp
+// const data = [
+//   {
+//     "date": "Saturday, June 7th, 2025",
+//     "highTemp": 51.0,
+//     "lowTemp": 65.0,
+//     "precip": 0.35,
+//     "watering": "N/A",
+//     "visitors": "None",
+//     "dayActivities": "Weld tiller, measure and stake out area. Remove weeds, mow, till soil to break up thatch, hand sift thatch from soil and dispose",
+//     "eveningActivities": "None",
+//     "manHours": ["Paul", 7.5, "Derek", 7.5],
+//     "purchases": ["Seeds, Stakes, Twine", 90.00],
+//     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
+//   }]
+
 
 function addManHours(pageNumber) {
 
