@@ -367,8 +367,80 @@ function addActivities(pageNumber) {
 //     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
 //   }]
 
-
+//Displays currrent day's activities and man hours, displays the previous total,
+//displays new total
 function addManHours(pageNumber) {
+  let previousTotal = 0.0;
+  let newTotal = 0.0;
+  let currentActivity = data[pageNumber].manHours[0];
+  let currentHours = data[pageNumber].manHours[1];
+
+  //get divs
+  const manhoursDiv = document.getElementById("manhours");
+  //clear existing content
+  manhoursDiv.innerHTML = "";
+
+  // Create manhours content
+  const manhoursHeading = document.createElement("h3");
+  manhoursHeading.innerText = "Manhours:  ";
+
+  //Add content to divs
+  manhoursDiv.appendChild(manhoursHeading);
+
+  //Create div for text
+  const manhoursText = document.createElement('div');
+  manhoursText.setAttribute("id", "manhoursText");
+  manhoursDiv.appendChild(manhoursText);
+
+
+
+
+  for (let i = 0; i < pageNumber; i++) {
+    previousTotal = previousTotal + data[i].manHours[1];
+  }
+
+  const manhoursTable = document.createElement("table");
+  const manhoursBody = document.createElement("tbody");
+  const row1 = document.createElement("tr");
+  const row2 = document.createElement("tr");
+  const row3 = document.createElement("tr");
+  const cell11 = document.createElement("td");
+  const cell12 = document.createElement("td");
+  const cell21 = document.createElement("td");
+  const cell22 = document.createElement("td");
+  const cell31 = document.createElement("td");
+  const cell32 = document.createElement("td");
+  let cell11Text = document.createTextNode("Previous Total: ");
+  let cell12Text = document.createTextNode(previousTotal);
+  let cell21Text = document.createTextNode(currentActivity);
+  let cell22Text = document.createTextNode(currentHours);
+  let cell31Text = document.createTextNode("New Total: ");
+  let cell32Text = document.createTextNode(previousTotal + currentHours);
+
+  cell11.appendChild(cell11Text);
+  cell12.appendChild(cell12Text);
+  cell21.appendChild(cell21Text);
+  cell22.appendChild(cell22Text);
+  cell31.appendChild(cell31Text);
+  cell32.appendChild(cell32Text);
+
+  row1.appendChild(cell11);
+  row1.appendChild(cell12);
+  row2.appendChild(cell21);
+  row2.appendChild(cell22);
+  row3.appendChild(cell31);
+  row3.appendChild(cell32);
+
+  manhoursBody.appendChild(row1);
+  manhoursBody.appendChild(row2);
+  manhoursBody.appendChild(row3);
+
+  manhoursTable.appendChild(manhoursBody);
+
+  manhoursText.appendChild(manhoursTable);
+
+
+
 
 }
 
