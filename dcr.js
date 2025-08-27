@@ -4,7 +4,7 @@ import { layout } from "./dcrlayoutdata.js";
 let page = 0;
 generateDCR(page);
 
-//MAN HOURS, PURCHASES, PHOTO CORRECT
+//PHOTO CORRECT
 
 function generateDCR(pageNumber) {
 
@@ -18,6 +18,7 @@ function generateDCR(pageNumber) {
   addActivities(pageNumber);
   addManHours(pageNumber);
   addPurchases(pageNumber);
+  addHarvest(pageNumber);
 }
 
 function addPrev() {
@@ -364,6 +365,7 @@ function addActivities(pageNumber) {
 //     "eveningActivities": "None",
 //     "manHours": ["Paul", 7.5, "Derek", 7.5],
 //     "purchases": ["Seeds, Stakes, Twine", 90.00],
+//     "harvest": ["Stuff", 20],
 //     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
 //   }]
 
@@ -439,11 +441,130 @@ function addManHours(pageNumber) {
 
   manhoursText.appendChild(manhoursTable);
 
-
-
-
 }
 
 function addPurchases(pageNumber) {
 
+  let total = 0.0;
+
+  //get divs
+  const purchasesDiv = document.getElementById("purchases");
+  //clear existing content
+  purchasesDiv.innerHTML = "";
+
+  // Create purchases content
+  const purchasesHeading = document.createElement("h3");
+  purchasesHeading.innerText = "Purchases:  ";
+
+  //Add content to divs
+  purchasesDiv.appendChild(purchasesHeading);
+
+  //Create div for text
+  const purchasesText = document.createElement('div');
+  purchasesText.setAttribute("id", "purchasesText");
+  purchasesDiv.appendChild(purchasesText);
+
+  //Create table
+  const purchasesTable = document.createElement("table");
+  const purchasesBody = document.createElement("tbody");
+
+  for (let i = 0; i <= pageNumber; i++) {
+    total = total + data[i].purchases[1];
+    let row = document.createElement("tr");
+    let date = document.createElement("td");
+    let type = document.createElement("td");
+    let amount = document.createElement("td");
+    let dateText = document.createTextNode(data[i].date);
+    let typeText = document.createTextNode(data[i].purchases[0]);
+    let amountText = document.createTextNode(data[i].purchases[1]);
+    date.appendChild(dateText);
+    type.appendChild(typeText);
+    amount.appendChild(amountText);
+    row.appendChild(date);
+    row.appendChild(type);
+    row.appendChild(amount);
+    purchasesBody.appendChild(row);
+
+  }
+    let totalRow = document.createElement("tr");
+    let totalHeading = document.createElement("td");
+    let totalBlank = document.createElement("td");
+    let totalAmount = document.createElement("td");
+    let totalHeadingText = document.createTextNode("Total:  ");
+    let totalBlankText = document.createTextNode("     ");
+    let totalAmountText = document.createTextNode(total);
+    totalHeading.appendChild(totalHeadingText);
+    totalBlank.appendChild(totalBlankText);
+    totalAmount.appendChild(totalAmountText);
+    totalRow.appendChild(totalHeading);
+    totalRow.appendChild(totalBlank);
+    totalRow.appendChild(totalAmount);
+    purchasesBody.appendChild(totalRow);
+    purchasesTable.appendChild(purchasesBody);
+    purchasesText.appendChild(purchasesTable);
+
 }
+
+function addHarvest(pageNumber) {
+
+  let harvestObject = {};
+
+  //get div
+  const harvestDiv = document.getElementById("harvest");
+  //clear existing content
+  harvestDiv.innerHTML = "";
+
+  // Create purchases content
+  const harvestHeading = document.createElement("h3");
+  harvestHeading.innerText = "Harvest:  ";
+
+  //Add content to divs
+  harvestDiv.appendChild(harvestHeading);
+
+  //Create div for text
+  const harvestText = document.createElement('div');
+  harvestText.setAttribute("id", "harvestText");
+  harvestDiv.appendChild(harvestText);
+
+  //Create table
+  const harvestTable = document.createElement("table");
+  const harvestBody = document.createElement("tbody");
+
+  //Create harvestObject
+  for (let i = 0; i <= pageNumber; i++) {
+
+    for (let j = 0; j < data[i].harvest.length; j += 2) {
+      if (data[i].harvest[j] in harvestObject) {
+        harvestObject[data[i].harvest[j]] = harvestObject[data[i].harvest[j]] + data[i].harvest[j+1];
+      }
+      else {
+        harvestObject[data[i].harvest[j]] = data[i].harvest[j+1];
+      }
+      }
+    }
+
+    //Create table
+    for (var key in harvestObject) {
+      if (!harvestObject.hasOwnProperty(key)) {
+          //The current property is not a direct property of p
+          continue;
+      }
+      let row = document.createElement("tr");
+      let type = document.createElement("td");
+      let amount = document.createElement("td");
+      let typeText = document.createTextNode(key);
+      let amountText = document.createTextNode(harvestObject[key]);
+      type.appendChild(typeText);
+      amount.appendChild(amountText);
+      row.appendChild(type);
+      row.appendChild(amount);
+      harvestBody.appendChild(row);
+    }
+
+    harvestTable.appendChild(harvestBody);
+    harvestText.appendChild(harvestTable);
+
+}
+
+
+
