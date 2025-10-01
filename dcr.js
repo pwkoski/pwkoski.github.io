@@ -451,9 +451,6 @@ function addManHours(pageNumber) {
 
 function addPurchases(pageNumber) {
 
-<<<<<<< Updated upstream
-}
-=======
   let total = 0.0;
 
   //get divs
@@ -636,4 +633,3 @@ function addPreserve(pageNumber) {
 
 }
 
->>>>>>> Stashed changes

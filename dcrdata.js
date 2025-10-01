@@ -11,11 +11,8 @@ export const data = [
     "eveningActivities": "None",
     "manHours": ["Construction", 15.0],
     "purchases": ["Seeds, Stakes, Twine", 90.00],
-<<<<<<< Updated upstream
-=======
     "harvest": ["Zucchini", 4.0],
     "preserve": ["Potatoes", "Two five-gallon buckets"],
->>>>>>> Stashed changes
     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
   },
   {
@@ -29,11 +26,8 @@ export const data = [
     "eveningActivities": "Trip to farm supply store to purchase fencing",
     "manHours": ["Construction", 22.0],
     "purchases": ["Fenceposts", 300.00],
-<<<<<<< Updated upstream
-=======
     "harvest": ["Beans", 200.0, "Cucumbers", 3.0],
     "preserve": ["Tomatoes", "Four one-lb bags"],
->>>>>>> Stashed changes
     "image_url": ["https://picsum.photos/400", "https://picsum.photos/300", "https://picsum.photos/200"],
   },
   {
@@ -47,11 +41,8 @@ export const data = [
     "eveningActivities": "Pick up fencing 2 heavy duty, 1 light duty, work gloves, and zip ties from Menards. Pick up fence pounder/work gloves/hoe/ladder from parents.",
     "manHours": ["Construction", 3.0],
     "purchases": ["Fencing", 90.00],
-<<<<<<< Updated upstream
-=======
     "harvest": ["Zucchini", 4.0],
     "preserve": ["Cucumbers", "Six pint jars of pickles"],
->>>>>>> Stashed changes
     "image_url": ["https://picsum.photos/300", "https://picsum.photos/400", "https://picsum.photos/300"],
   },
 
