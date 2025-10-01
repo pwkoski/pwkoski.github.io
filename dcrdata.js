@@ -48,6 +48,7 @@ export const data = [
 
 ]
 
+
 // {
 //   "date": "",
 //   "highTemp": 0.0,
