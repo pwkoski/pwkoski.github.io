@@ -12,6 +12,7 @@ export const data = [
     "manHours": ["Construction", 15.0],
     "purchases": ["Seeds, Stakes, Twine", 90.00],
     "harvest": ["Zucchini", 4.0],
+    "preserve": ["Potatoes", "Two five-gallon buckets"],
     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
   },
   {
@@ -26,6 +27,7 @@ export const data = [
     "manHours": ["Construction", 22.0],
     "purchases": ["Fenceposts", 300.00],
     "harvest": ["Beans", 200.0, "Cucumbers", 3.0],
+    "preserve": ["Tomatoes", "Four one-lb bags"],
     "image_url": ["https://picsum.photos/400", "https://picsum.photos/300", "https://picsum.photos/200"],
   },
   {
@@ -40,10 +42,12 @@ export const data = [
     "manHours": ["Construction", 3.0],
     "purchases": ["Fencing", 90.00],
     "harvest": ["Zucchini", 4.0],
+    "preserve": ["Cucumbers", "Six pint jars of pickles"],
     "image_url": ["https://picsum.photos/300", "https://picsum.photos/400", "https://picsum.photos/300"],
   },
 
 ]
+
 
 // {
 //   "date": "",
