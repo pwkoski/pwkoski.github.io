@@ -133,6 +133,7 @@ p, ul {
 #pictures {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
 }
