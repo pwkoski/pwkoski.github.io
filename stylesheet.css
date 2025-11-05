@@ -147,25 +147,12 @@ p, ul {
   overflow-x: auto;
 }
 
-#overflowContainer {
-  width: 100%;
-  overflow-x: auto;
-}
-
-#weatherGardenContainer {
+#layout {
   min-width: 800px;
+}
+
+#layoutFlexContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#weather {
-  padding: 5px;
-  margin: 5px;
-}
-
-#weather td {
-  background-color: white;
 }
 
 #gardenlayout {
@@ -193,7 +180,7 @@ p, ul {
   color: white;
 }
 
-.unknown {
+.none {
   background-color: white;
 }
 
@@ -274,16 +261,6 @@ p, ul {
   color: white;
 }
 
-#visitorsDiv {
-  width: 100%;
-  display: flex;
-  align-items: baseline;
-}
-
-#visitorsText {
-  padding: 5px;
-}
-
 #dayActivitiesDiv {
   width: 100%;
   display: flex;
@@ -291,15 +268,5 @@ p, ul {
 }
 
 #dayActivitiesText {
-  padding: 5px;
-}
-
-#eveningActivitiesDiv {
-  width: 100%;
-  display: flex;
-  align-items: baseline;
-}
-
-#eveningActivitiesText {
   padding: 5px;
 }

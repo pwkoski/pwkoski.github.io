@@ -6,7 +6,7 @@ export const layout = [
     "link": ""
   },
   {
-    "name": "unknown",
+    "name": "none",
     "grid": [0,0,39,0],
     "link": ""
   },
@@ -96,12 +96,12 @@ export const layout = [
     "link": ""
   },
   {
-    "name": "unknown",
+    "name": "none",
     "grid": [30,8,39,8],
     "link": ""
   },
   {
-    "name": "unknown",
+    "name": "none",
     "grid": [0,9,39,9],
     "link": ""
   }

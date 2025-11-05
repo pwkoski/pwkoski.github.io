@@ -4,16 +4,12 @@ import { layout } from "./dcrlayoutdata.js";
 let page = 0;
 generateDCR(page);
 
-//PHOTO CORRECT
-
 function generateDCR(pageNumber) {
 
   addPrev();
   addTitle(pageNumber);
   addNext();
   addPictures(pageNumber);
-  clearWeatherAndLayoutContainer();
-  addWeather(pageNumber);
   addLayout(40, 10, layout);
   addActivities(pageNumber);
   addManHours(pageNumber);
@@ -22,6 +18,9 @@ function generateDCR(pageNumber) {
   addPreserve(pageNumber);
 }
 
+//addPrev: Function that adds the "Previous" button to the page
+//@param: none
+//@return: none, adds the button to the page
 function addPrev() {
 
   // get the prev div
@@ -30,18 +29,23 @@ function addPrev() {
   //clear content in prev div
   prevDiv.innerHTML = "";
 
+  //create button
   let buttonPrev = document.createElement("button");
   buttonPrev.innerHTML = "Previous";
+  //set functionality
   buttonPrev.onclick = function () {
     page--;
     if (page < 0) {
-      page = 0;
+      page = data.length - 1;
     }
     generateDCR(page);
   };
   prevDiv.appendChild(buttonPrev);
 }
 
+//addTitle: Function that adds the page title to the page
+//@param: none
+//@return: none, adds the title to the page
 function addTitle(pageNumber) {
 
   // get the title div
@@ -58,6 +62,9 @@ function addTitle(pageNumber) {
   titleDiv.appendChild(heading);
 }
 
+//addNext: Function that adds the "Next" button to the page
+//@param: none
+//@return: none, adds the button to the page
 function addNext() {
 
   // get the next div
@@ -79,12 +86,15 @@ function addNext() {
 
 }
 
+//addPictures: Function that adds pictures to the page
+//@param: int pageNumber, the number corresponding to the entry
+//@return: none, adds pictures to the page
 function addPictures(pageNumber) {
 
-  // get the next div
+  // get the picture div
   const picturesDiv = document.getElementById("pictures");
 
-  //clear content in next div
+  //clear content in picture div
   picturesDiv.innerHTML = "";
 
   //Add images from data
@@ -96,282 +106,168 @@ function addPictures(pageNumber) {
 
 }
 
-function   clearWeatherAndLayoutContainer() {
-  //get container div
-  const containerDiv = document.getElementById("weatherGardenContainer");
-  //clear existing content
-  containerDiv.innerHTML = "";
-}
-
-function addWeather(pageNumber) {
-
-  //create the weather div
-  const weatherDiv = document.createElement('div');
-  weatherDiv.setAttribute("id", "weather");
-
-  // weather content
-  const weatherHighTempText = document.createTextNode("High Temperature (F): ");
-  const weatherHighTempNum = document.createTextNode(data[pageNumber].highTemp);
-  const weatherLowTempText = document.createTextNode("Low Temperature (F): ");
-  const weatherLowTempNum = document.createTextNode(data[pageNumber].lowTemp);
-  const weatherPrecipText = document.createTextNode("Precipitation (in): ");
-  const weatherPrecipNum = document.createTextNode(data[pageNumber].precip);
-  const wateringText = document.createTextNode("Watering: ");
-  const wateringNum = document.createTextNode(data[pageNumber].watering);
-
-  //Create table
-  let weatherTable = document.createElement('table');
-
-  //Create table body
-  let weatherTableBody = document.createElement('tbody');
-
-  //Create rows
-  const row1 = document.createElement("tr");
-  const row2 = document.createElement("tr");
-  const row3 = document.createElement("tr");
-  const row4 = document.createElement("tr");
-
-  //Create data cells
-  const cell11 = document.createElement("td");
-  const cell12 = document.createElement("td");
-  const cell21 = document.createElement("td");
-  const cell22 = document.createElement("td");
-  const cell31 = document.createElement("td");
-  const cell32 = document.createElement("td");
-  const cell41 = document.createElement("td");
-  const cell42 = document.createElement("td");
-
-  //Append data to data cells
-  cell11.appendChild(weatherHighTempText);
-  cell12.appendChild(weatherHighTempNum);
-  cell21.appendChild(weatherLowTempText);
-  cell22.appendChild(weatherLowTempNum);
-  cell31.appendChild(weatherPrecipText);
-  cell32.appendChild(weatherPrecipNum);
-  cell41.appendChild(wateringText);
-  cell42.appendChild(wateringNum);
-
-  //Append cells to rows
-  row1.appendChild(cell11);
-  row1.appendChild(cell12);
-  row2.appendChild(cell21);
-  row2.appendChild(cell22);
-  row3.appendChild(cell31);
-  row3.appendChild(cell32);
-  row4.appendChild(cell41);
-  row4.appendChild(cell42);
-
-  //Append rows to body
-  weatherTableBody.appendChild(row1);
-  weatherTableBody.appendChild(row2);
-  weatherTableBody.appendChild(row3);
-  weatherTableBody.appendChild(row4);
-
-  //Append table body to table
-  weatherTable.appendChild(weatherTableBody);
-
-  // add the weather table to the weather div
-  weatherDiv.appendChild(weatherTable);
-
-  //get the weather and layout container div
-  const containerDiv = document.getElementById("weatherGardenContainer");
-
-  //append weatherDiv to containerDiv
-  containerDiv.appendChild(weatherDiv);
-
-}
-
 //addLayout: creates the layout and legend and appends to the weather and layout container
 //@param: noRow, number of rows in the layout
 //@param: noColumn, number of columns in the layout
-//@param: layout, array of ingredient objects with name string, grid occupancy on a rowxcolumn matrix in [R1,C1,R2,C2] format, and link.
+//@param: layout, array of ingredient objects with ingredient name and occupancy in a matrix in [Row Start,Column Start,Row End,Column End] format.
 //@return: none, modifies DOM
 function addLayout(noRow, noColumn, layout) {
 
-    //Create empty matrix
-    let layoutMatrix = [];
+  //Create empty matrix
+  let layoutMatrix = [];
 
-    for ( let y = 0; y < noRow; y++ ) {
-      layoutMatrix[ y ] = [];
-      for ( let x = 0; x < noColumn; x++ ) {
-        layoutMatrix[ y ][ x ] = "";
-      }
+  for ( let y = 0; y < noRow; y++ ) {
+    layoutMatrix[ y ] = [];
+    for ( let x = 0; x < noColumn; x++ ) {
+      layoutMatrix[ y ][ x ] = "";
+    }
+  }
+
+  //Fill matrix with data
+  for ( let n = 0; n < layout.length; n++) {
+
+    let rowStart = layout[n].grid[0];
+    let colStart = layout[n].grid[1];
+    let rowEnd = layout[n].grid[2];
+    let colEnd = layout[n].grid[3];
+
+    for ( let x = rowStart; x <= rowEnd; x++ ) {
+      layoutMatrix[x][colStart] = {name: layout[n].name, link: layout[n].link}
+    }
+  }
+
+  //Create layout HTML table
+  const tbl = document.createElement("table");
+  const tblBody = document.createElement("tbody");
+
+  for (let i = 0; i < noRow; i++) {
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < noColumn; j++) {
+      const cell = document.createElement("td");
+      cell.setAttribute("class", layoutMatrix[i][j].name);
+      row.appendChild(cell);
     }
 
-    //Fill matrix with data
-    for ( let n = 0; n < layout.length; n++) {
+    tblBody.appendChild(row);
+  }
 
-      let rowStart = layout[n].grid[0];
-      let colStart = layout[n].grid[1];
-      let rowEnd = layout[n].grid[2];
-      let colEnd = layout[n].grid[3];
+  tbl.appendChild(tblBody);
 
-      for ( let x = rowStart; x <= rowEnd; x++ ) {
-        layoutMatrix[x][colStart] = {name: layout[n].name, link: layout[n].link}
-      }
+
+  //Create div for garden
+  const gardenDiv = document.createElement('div');
+  gardenDiv.setAttribute("id", "gardenlayout");
+  //add table to layoutdiv
+  gardenDiv.appendChild(tbl);
+
+  //Create div for legend
+  const legendDiv = document.createElement('div');
+  legendDiv.setAttribute("id", "legend");
+
+  //Create legend table
+  const legend = document.createElement("table");
+  const legendBody = document.createElement("tbody");
+
+  //Create flag for "unknown" so multiple entries aren't made
+  let foundUnknown = false;
+  for (let i = 1; i < layout.length; i++) {
+    if (layout[i].name == "none" && foundUnknown == true) {
+      continue;
     }
-
-    //Create layout HTML table
-    const tbl = document.createElement("table");
-    const tblBody = document.createElement("tbody");
-
-    for (let i = 0; i < noRow; i++) {
-      const row = document.createElement("tr");
-
-      for (let j = 0; j < noColumn; j++) {
-        const cell = document.createElement("td");
-        cell.setAttribute("class", layoutMatrix[i][j].name);
-        row.appendChild(cell);
-      }
-
-      tblBody.appendChild(row);
+    else {
+      if (layout[i].name == "none") foundUnknown = true;
+      const legendrow = document.createElement("tr");
+      const cell = document.createElement("td");
+      let linkText = document.createTextNode(layout[i].name);
+      cell.appendChild(linkText);
+      cell.setAttribute("class", layout[i].name);
+      cell.addEventListener("mouseenter", hightlight);
+      cell.addEventListener("mouseleave", reverse);
+      legendrow.appendChild(cell);
+      legendBody.appendChild(legendrow);
     }
-
-    tbl.appendChild(tblBody);
-
-
-    //Create div for layout
-    const layoutDiv = document.createElement('div');
-    layoutDiv.setAttribute("id", "gardenlayout");
-    //add table to layoutdiv
-    layoutDiv.appendChild(tbl);
-
-    //Create div for legend
-    const legendDiv = document.createElement('div');
-    legendDiv.setAttribute("id", "legend");
-
-    //Create legend table
-    const legend = document.createElement("table");
-    const legendBody = document.createElement("tbody");
-
-    //Create flag for "unknown" so multiple entries aren't made
-    let foundUnknown = false;
-    for (let i = 1; i < layout.length; i++) {
-      if (layout[i].name == "unknown" && foundUnknown == true) {
-        continue;
-      }
-      else {
-        if (layout[i].name == "unknown") foundUnknown = true;
-        const legendrow = document.createElement("tr");
-        const cell = document.createElement("td");
-        let linkText = document.createTextNode(layout[i].name);
-        cell.appendChild(linkText);
-        cell.setAttribute("class", layout[i].name);
-        cell.addEventListener("mouseenter", hightlight);
-        cell.addEventListener("mouseleave", reverse);
-        legendrow.appendChild(cell);
-        legendBody.appendChild(legendrow);
-      }
-
-    }
-
-    //Append body to table
-    legend.appendChild(legendBody);
-    //Append table to div
-    legendDiv.appendChild(legend);
-
-    //Append layout div and legend div to container div
-    //get the weather and layout container div
-    const containerDiv = document.getElementById("weatherGardenContainer");
-    //append layoutDiv to containerDiv
-    containerDiv.appendChild(layoutDiv);
-    //append legendDiv to containerDiv
-    containerDiv.appendChild(legendDiv);
-
-     //helper functions
-     function hightlight(evt) {
-       let targets = document.getElementsByClassName(evt.target.className);
-       let targetsArray = Array.from(targets);
-       for (let i = 0; i < targetsArray.length; i++) {
-        targetsArray[i].className = "legendHighlight";
-       }
-     }
-
-     function reverse(evt) {
-      let newClassName = evt.target.innerText;
-      let targets = document.getElementsByClassName("legendHighlight");
-      let targetsArray = Array.from(targets);
-      for (let i = 0; i < targetsArray.length; i++) {
-        targetsArray[i].className = newClassName;
-      }
-     }
 
   }
 
+  //Append body to table
+  legend.appendChild(legendBody);
+  //Append table to div
+  legendDiv.appendChild(legend);
+
+  //Append layout div and legend div to layout div
+  //get the layout container div
+  const layoutDiv = document.getElementById("layout");
+  //Clear content
+  layoutDiv.innerHTML = "";
+
+  //Add heading
+  const layoutHeading = document.createElement("h3");
+  layoutHeading.innerText = "Garden Layout:  ";
+  layoutDiv.appendChild(layoutHeading);
+  //Create flex container for layout and legend
+  const layoutFlexContainer = document.createElement("div");
+  layoutFlexContainer.setAttribute("id", "layoutFlexContainer");
+  layoutDiv.appendChild(layoutFlexContainer);
+  //append legendDiv to layoutDiv
+  layoutFlexContainer.appendChild(legendDiv);
+  //append  gardenDiv to layoutDiv
+  layoutFlexContainer.appendChild(gardenDiv);
+
+
+  //helper functions
+  function hightlight(evt) {
+    let targets = document.getElementsByClassName(evt.target.className);
+    let targetsArray = Array.from(targets);
+    for (let i = 0; i < targetsArray.length; i++) {
+    targetsArray[i].className = "legendHighlight";
+    }
+  }
+
+  function reverse(evt) {
+    let newClassName = evt.target.innerText;
+    let targets = document.getElementsByClassName("legendHighlight");
+    let targetsArray = Array.from(targets);
+    for (let i = 0; i < targetsArray.length; i++) {
+      targetsArray[i].className = newClassName;
+    }
+  }
+
+}
+
+//addActivities: Function that adds the days activities to the page
+//@param: int pageNumber, the number corresponding to the entry
+//@return: none, adds activities to the page
 function addActivities(pageNumber) {
 
-  // get the activities and visitors divs
+  // get the activities divs
   const activitiesDiv = document.getElementById("activities");
-  const visitorsDiv = document.getElementById("visitorsDiv");
-  const visitorsText = document.getElementById("visitorsText");
   const dayActivitiesDiv = document.getElementById("dayActivitiesDiv");
   const dayActivitiesText = document.getElementById("dayActivitiesText");
-  const eveningActivitiesDiv = document.getElementById("eveningActivitiesDiv");
-  const eveningActivitiesText = document.getElementById("eveningActivitiesText");
 
   // clear data in divs
   activitiesDiv.innerHTML = "";
-  visitorsDiv.innerHTML = "";
-  visitorsText.innerHTML = "";
   dayActivitiesDiv.innerHTML = "";
   dayActivitiesText.innerHTML = "";
-  eveningActivitiesDiv.innerHTML = "";
-  eveningActivitiesText.innerHTML = "";
-
-  // Create visistors content
-  const visitors = document.createTextNode(data[pageNumber].visitors);
-  const visitorsHeading = document.createElement("h3");
-  visitorsHeading.innerText = "Visitors:  ";
-
-  //Add visitor content to divs
-  visitorsDiv.appendChild(visitorsHeading);
-
-  visitorsText.appendChild(visitors);
-  visitorsDiv.appendChild(visitorsText);
-
-  activitiesDiv.appendChild(visitorsDiv);
 
   // Create activities content
   const activitiesDay = document.createTextNode(data[pageNumber].dayActivities);
   const dayActivitiesHeading = document.createElement("h3");
-  dayActivitiesHeading.innerText = "Day Activities:  ";
-  const activitiesEvening = document.createTextNode(data[pageNumber].eveningActivities);
-  const eveningActivitiesHeading = document.createElement("h3");
-  eveningActivitiesHeading.innerText = "Evening Activities:  ";
+  dayActivitiesHeading.innerText = "Activities:  ";
 
   //Add activity content to divs
   dayActivitiesDiv.appendChild(dayActivitiesHeading);
-  eveningActivitiesDiv.appendChild(eveningActivitiesHeading);
-
   dayActivitiesText.appendChild(activitiesDay);
-  eveningActivitiesText.appendChild(activitiesEvening);
   dayActivitiesDiv.appendChild(dayActivitiesText);
-  eveningActivitiesDiv.appendChild(eveningActivitiesText)
 
   activitiesDiv.appendChild(dayActivitiesDiv);
-  activitiesDiv.appendChild(eveningActivitiesDiv);
+
 }
 
-
-//data[pageNumber].highTemp
-// const data = [
-//   {
-//     "date": "Saturday, June 7th, 2025",
-//     "highTemp": 51.0,
-//     "lowTemp": 65.0,
-//     "precip": 0.35,
-//     "watering": "N/A",
-//     "visitors": "None",
-//     "dayActivities": "Weld tiller, measure and stake out area. Remove weeds, mow, till soil to break up thatch, hand sift thatch from soil and dispose",
-//     "eveningActivities": "None",
-//     "manHours": ["Paul", 7.5, "Derek", 7.5],
-//     "purchases": ["Seeds, Stakes, Twine", 90.00],
-//     "harvest": ["Stuff", 20],
-//     "image_url": ["https://picsum.photos/200", "https://picsum.photos/300", "https://picsum.photos/400"],
-//   }]
-
-//Displays currrent day's activities and man hours, displays the previous total,
-//displays new total
+//addActivities: Function that adds currrent day's activities and man hours to page, displays the previous total,
+//and displays the new total.
+//@param: int pageNumber, the number corresponding to the entry
+//@return: none, adds man hours to the page
 function addManHours(pageNumber) {
   let previousTotal = 0.0;
   let newTotal = 0.0;
@@ -395,13 +291,12 @@ function addManHours(pageNumber) {
   manhoursText.setAttribute("id", "manhoursText");
   manhoursDiv.appendChild(manhoursText);
 
-
-
-
+  //Sum previous man hours
   for (let i = 0; i < pageNumber; i++) {
     previousTotal = previousTotal + data[i].manHours[1];
   }
 
+  //Create man hours table
   const manhoursTable = document.createElement("table");
   const manhoursBody = document.createElement("tbody");
   const row1 = document.createElement("tr");
@@ -444,6 +339,9 @@ function addManHours(pageNumber) {
 
 }
 
+//addPurchases: Function that adds currrent day's purchases to the page, displays the total.
+//@param: int pageNumber, the number corresponding to the entry
+//@return: none, adds purchases to the page
 function addPurchases(pageNumber) {
 
   let total = 0.0;
@@ -470,6 +368,9 @@ function addPurchases(pageNumber) {
   const purchasesBody = document.createElement("tbody");
 
   for (let i = 0; i <= pageNumber; i++) {
+    if (data[i].purchases[0] == "") {
+      continue;
+    }
     total = total + data[i].purchases[1];
     let row = document.createElement("tr");
     let date = document.createElement("td");
@@ -487,25 +388,29 @@ function addPurchases(pageNumber) {
     purchasesBody.appendChild(row);
 
   }
-    let totalRow = document.createElement("tr");
-    let totalHeading = document.createElement("td");
-    let totalBlank = document.createElement("td");
-    let totalAmount = document.createElement("td");
-    let totalHeadingText = document.createTextNode("Total:  ");
-    let totalBlankText = document.createTextNode("     ");
-    let totalAmountText = document.createTextNode(total);
-    totalHeading.appendChild(totalHeadingText);
-    totalBlank.appendChild(totalBlankText);
-    totalAmount.appendChild(totalAmountText);
-    totalRow.appendChild(totalHeading);
-    totalRow.appendChild(totalBlank);
-    totalRow.appendChild(totalAmount);
-    purchasesBody.appendChild(totalRow);
-    purchasesTable.appendChild(purchasesBody);
-    purchasesText.appendChild(purchasesTable);
+
+  let totalRow = document.createElement("tr");
+  let totalHeading = document.createElement("td");
+  let totalBlank = document.createElement("td");
+  let totalAmount = document.createElement("td");
+  let totalHeadingText = document.createTextNode("Total:  ");
+  let totalBlankText = document.createTextNode("     ");
+  let totalAmountText = document.createTextNode(total);
+  totalHeading.appendChild(totalHeadingText);
+  totalBlank.appendChild(totalBlankText);
+  totalAmount.appendChild(totalAmountText);
+  totalRow.appendChild(totalHeading);
+  totalRow.appendChild(totalBlank);
+  totalRow.appendChild(totalAmount);
+  purchasesBody.appendChild(totalRow);
+  purchasesTable.appendChild(purchasesBody);
+  purchasesText.appendChild(purchasesTable);
 
 }
 
+//addHarvest: Function that adds the current harvest up the the day to the page.
+//@param: int pageNumber, the number corresponding to the entry
+//@return: none, adds harvest to the page
 function addHarvest(pageNumber) {
 
   let harvestObject = {};
@@ -534,6 +439,9 @@ function addHarvest(pageNumber) {
   //Create harvestObject
   for (let i = 0; i <= pageNumber; i++) {
 
+    if (data[i].harvest[0] == "") {
+      continue;
+    }
     for (let j = 0; j < data[i].harvest.length; j += 2) {
       if (data[i].harvest[j] in harvestObject) {
         harvestObject[data[i].harvest[j]] = harvestObject[data[i].harvest[j]] + data[i].harvest[j+1];
@@ -542,31 +450,34 @@ function addHarvest(pageNumber) {
         harvestObject[data[i].harvest[j]] = data[i].harvest[j+1];
       }
       }
-    }
+  }
 
-    //Create table
-    for (var key in harvestObject) {
-      if (!harvestObject.hasOwnProperty(key)) {
-          //The current property is not a direct property of p
-          continue;
-      }
-      let row = document.createElement("tr");
-      let type = document.createElement("td");
-      let amount = document.createElement("td");
-      let typeText = document.createTextNode(key);
-      let amountText = document.createTextNode(harvestObject[key]);
-      type.appendChild(typeText);
-      amount.appendChild(amountText);
-      row.appendChild(type);
-      row.appendChild(amount);
-      harvestBody.appendChild(row);
+  //Create table
+  for (var key in harvestObject) {
+    if (!harvestObject.hasOwnProperty(key)) {
+        //The current property is not a direct property of harvestObject
+        continue;
     }
+    let row = document.createElement("tr");
+    let type = document.createElement("td");
+    let amount = document.createElement("td");
+    let typeText = document.createTextNode(key);
+    let amountText = document.createTextNode(harvestObject[key]);
+    type.appendChild(typeText);
+    amount.appendChild(amountText);
+    row.appendChild(type);
+    row.appendChild(amount);
+    harvestBody.appendChild(row);
+  }
 
-    harvestTable.appendChild(harvestBody);
-    harvestText.appendChild(harvestTable);
+  harvestTable.appendChild(harvestBody);
+  harvestText.appendChild(harvestTable);
 
 }
 
+//addPreserve: Function that adds the current preserved items up the the day to the page.
+//@param: int pageNumber, the number corresponding to the entry
+//@return: none, adds preserved items to the page
 function addPreserve(pageNumber) {
 
   let preserveObject = {};
@@ -595,36 +506,33 @@ function addPreserve(pageNumber) {
   //Create preserveObject
   for (let i = 0; i <= pageNumber; i++) {
 
+    if (data[i].preserve[0] == "") {
+      continue;
+    }
     for (let j = 0; j < data[i].preserve.length; j += 2) {
-      // if (data[i].harvest[j] in harvestObject) {
-      //   harvestObject[data[i].harvest[j]] = harvestObject[data[i].harvest[j]] + data[i].harvest[j+1];
-      // }
-      // else {
       preserveObject[data[i].preserve[j]] = data[i].preserve[j+1];
     }
   }
 
-
-    //Create table
-    for (var key in preserveObject) {
-      if (!preserveObject.hasOwnProperty(key)) {
-          //The current property is not a direct property of p
-          continue;
-      }
-      let row = document.createElement("tr");
-      let type = document.createElement("td");
-      let amount = document.createElement("td");
-      let typeText = document.createTextNode(key);
-      let amountText = document.createTextNode(preserveObject[key]);
-      type.appendChild(typeText);
-      amount.appendChild(amountText);
-      row.appendChild(type);
-      row.appendChild(amount);
-      preserveBody.appendChild(row);
+  //Create table
+  for (var key in preserveObject) {
+    if (!preserveObject.hasOwnProperty(key)) {
+        //The current property is not a direct property of p
+        continue;
     }
+    let row = document.createElement("tr");
+    let type = document.createElement("td");
+    let amount = document.createElement("td");
+    let typeText = document.createTextNode(key);
+    let amountText = document.createTextNode(preserveObject[key]);
+    type.appendChild(typeText);
+    amount.appendChild(amountText);
+    row.appendChild(type);
+    row.appendChild(amount);
+    preserveBody.appendChild(row);
+  }
 
-    preserveTable.appendChild(preserveBody);
-    preserveText.appendChild(preserveTable);
-
+  preserveTable.appendChild(preserveBody);
+  preserveText.appendChild(preserveTable);
 
 }
